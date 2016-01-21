@@ -1,0 +1,109 @@
+{% set posts = __SELF__.posts %}
+<style type="text/css">
+    .carousel-control {
+        padding-top:10%;
+        width:5%;
+    }
+
+    .thumbnail {
+        display: inline-block;
+        display: block;
+        height: auto;
+        max-width: 100%;
+        padding: 0px !important;
+        border: 0px solid #ddd;
+        transition: all .2s ease-in-out;
+        padding: 0px;
+    }
+
+    .overimagetext {
+        width: 435px;
+        text-align: center;
+    }
+
+    .overimagetext {
+        position: absolute;
+        width: 100%;
+        height: 100%;
+        font-size: 20px;
+        line-height: 11;
+        color: #FFF;
+    }
+    .well {
+        padding: 0px;
+        width: 1280px !important;
+    }
+
+    .col-sm-4 {
+        padding: 0px !important;
+        margin: 0px !important;
+        border: none !important;
+    }
+    ol.carousel-indicators {
+        padding-top: 280px;
+        position: absolute;
+        top: 0px;
+    }
+
+    .carousel-indicators li {
+        display: inline-block;
+        width: 18px;
+        height: 18px;
+        margin: 1px;
+        text-indent: -999px;
+        cursor: pointer;
+        border: 1px solid #CCC;
+        border-radius: 10px;
+    }
+    .carousel-indicators .active {
+        width: 18px;
+        height: 18px;
+        margin: 0;
+        background-color: #DBF50B;
+    }
+
+</style>
+<div class="col-md-12">
+    <div class="well">
+        <div id="myCarousel" class="carousel slide">
+            <!--ol class="carousel-indicators">
+                <li data-target="#myCarousel" data-slide-to="0" class="active"></li>
+                <li data-target="#myCarousel" data-slide-to="1"></li>
+                <li data-target="#myCarousel" data-slide-to="2"></li>
+            </ol-->
+            <div class="carousel-inner">
+                <div class="item active">
+                    <div class="row">
+                        {% for post in posts|slice(0,3) %}
+                            {% if post.published %}
+                            <div class="col-sm-4">
+                                <a href="{{ post.url }}">
+                                    <div class="overimagetext"> 
+                                        "{{ post.title }}"
+                                    </div>
+                                    {% if post.featured_images.count %}
+                                        {% for image in post.featured_images %}
+                                    <img width="435" height="270" data-src="{{ image.filename }}" src="{{ image.path }}" alt="{{ image.description }}" class="img-responsive">
+                                        {% endfor %}
+                                    {% endif %}
+                                </a>
+                            </div>
+                            {% endif %}
+                        {% endfor %}                        
+                    </div>
+                </div>
+            </div>
+            <a class="left carousel-control" href="#myCarousel" data-slide="prev">‹</a>
+            <a class="right carousel-control" href="#myCarousel" data-slide="next">›</a>
+        </div>
+    </div>
+</div>
+
+<script type='text/javascript'>
+
+    $(document).ready(function() {
+        $('#myCarousel').carousel({
+            interval: 20000
+        })
+    });
+</script>

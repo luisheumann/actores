@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<head>
+    <meta charset="utf-8">
+    <title>{{ this.page.title }}</title>
+	<meta name="description" content="">
+    <meta name="viewport" content="width=device-width">
+
+
+{% partial 'header-interno'   %}
+
+</head>
+<body>
+
+
+     <div class="menu-interno"> 
+     <img style="float:left" src="/themes/martin-flex/assets/images/logoheader.gif" alt="logo"> {% partial 'menu'   %}
+     </div>
+      <div class="bannertop">  <img width="1280px"  src="/themes/martin-flex/assets/images/slide2.jpg" alt="bannertop"></div>
+   
+
+<div class="contenido">
+<div class="blanco"> 
+{% page %}
+</div>
+</div>
+
+
+    <script src="{{ [
+        'assets/js/vendor/jquery-1.11.0.min.js',
+        'assets/js/bootstrap.js',
+        'assets/js/plugins.js',
+        'assets/js/main.js',
+        '@framework',
+        '@framework.extras']|theme }}"></script>
+
+
+
+</body>
+</html>

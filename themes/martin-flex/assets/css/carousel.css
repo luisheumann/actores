@@ -1,0 +1,65 @@
+.carousel-control {
+  padding-top:10%;
+  width:5%;
+}
+
+.thumbnail {
+  display: inline-block;
+  display: block;
+  height: auto;
+  max-width: 100%;
+  padding: 0px !important;
+  border: 0px solid #ddd;
+  transition: all .2s ease-in-out;
+  padding: 0px;
+}
+a {
+  color: #428bca;
+  text-decoration: none;
+}
+
+.overimagetext {
+  width: 435px;
+  text-align: center;
+}
+
+.overimagetext {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  font-size: 20px;
+  line-height: 11;
+  color: #FFF;
+}
+.well {
+  padding: 0px;
+  width: 1280px !important;
+}
+
+.col-sm-4 {
+  padding: 0px !important;
+  margin: 0px !important;
+  border: none !important;
+}
+ol.carousel-indicators {
+  padding-top: 280px;
+  position: absolute;
+  top: 0px;
+}
+
+.carousel-indicators li {
+  display: inline-block;
+  width: 18px;
+  height: 18px;
+  margin: 1px;
+  text-indent: -999px;
+  cursor: pointer;
+  border: 1px solid #CCC;
+  border-radius: 10px;
+}
+.carousel-indicators .active {
+  width: 18px;
+  height: 18px;
+  margin: 0;
+  background-color: #DBF50B;
+}

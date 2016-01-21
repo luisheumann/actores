@@ -1,0 +1,33 @@
+title = "Noticias"
+url = "/noticias/:slug"
+is_hidden = 0
+
+[blogPost]
+slug = "{{ :slug }}"
+categoryPage = "Bienestar-Social"
+==
+<!DOCTYPE html>
+<head>
+	<meta charset="utf-8">
+	<title>{{ this.page.title }}</title>
+	<meta name="description" content="">
+	<meta name="viewport" content="width=device-width">
+	{% partial 'header-interno'   %}
+</head>
+<body>
+	<div class="contenido">    
+		<div class="menu-interno"> 
+			{% partial 'menu' %}
+		</div><br><br><br><br><br>
+			{% component 'blogPost' %}
+			{% partial 'footer'   %}
+	</div>
+	<script src="{{ [
+		'assets/js/vendor/jquery-1.11.0.min.js',
+		'assets/js/bootstrap.js',
+		'assets/js/plugins.js',
+		'assets/js/main.js',
+		'@framework',
+		'@framework.extras']|theme }}"></script>
+</body>
+</html>

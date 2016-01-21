@@ -1,0 +1,39 @@
+==
+<?php
+function onStart() {
+
+    $this['portfolio'] = [
+        ['image' => 'iconos-HOME-01.png', 'title' => 'Quienes Somos' , 'caption' => 'Asperiores commodi illo fuga perferendis dolore repellendus sapiente ipsum.', 'enlace' => 'quienes-somos', ],
+        ['image' => 'iconos-HOME-02.png', 'title' => 'Noticias'   , 'caption' => 'Asperiores commodi illo fuga perferendis dolore repellendus sapiente ipsum.', 'enlace' => 'noticias-videos', ],
+        ['image' => 'iconos-HOME-03.png', 'title' => 'Legislación' , 'caption' => 'Asperiores commodi illo fuga perferendis dolore repellendus sapiente ipsum.', 'enlace' => 'legislacion', ],
+        ['image' => 'iconos-HOME-04.png', 'title' => 'Bienestar Social'  , 'caption' => 'Asperiores commodi illo fuga perferendis dolore repellendus sapiente ipsum.', 'enlace' => 'bienestar-social', ],
+        ['image' => 'iconos-HOME-05.png', 'title' => 'Socios', 'caption' => 'Asperiores commodi illo fuga perferendis dolore repellendus sapiente ipsum.', 'enlace' => 'socios', ],
+        ['image' => 'iconos-HOME-06.png', 'title' => 'Contacto'    , 'caption' => 'Asperiores commodi illo fuga perferendis dolore repellendus sapiente ipsum.', 'enlace' => 'contacto', ]
+    ];
+
+}
+?>
+==
+
+
+
+<div class="content-section" id="portfolio">
+    <div class="container">
+
+        <div class="row">
+        {% for row in portfolio %}
+            <div class="portfolio-item col-md-4 col-sm-6">
+                <div class="portfolio-thumb">
+                    <img src="{{ ('assets/images/gallery/' ~ row['image']) |theme }}" alt="{{ row['title'] }}">
+                    <div class="portfolio-overlay">
+                        <a href="{{ row['enlace'] }}">
+                            <h3>{{ row['title']  }}</h3>
+                        </a>
+                    </div>
+                </div>
+            </div>
+        {% endfor %}
+        </div>
+
+    </div>
+</div>

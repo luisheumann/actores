@@ -1,0 +1,325 @@
+<!DOCTYPE html>
+<head>
+    <meta charset="utf-8">
+    <title>{{ this.page.title }}</title>
+    <meta name="description" content="">
+    <meta name="viewport" content="width=device-width">
+
+
+{% partial 'header-interno'   %}
+
+
+<script type="text/javascript">
+    
+    function toggleChevron(e) {
+    $(e.target)
+        .prev('.panel-heading')
+        .find("i.indicator")
+        .toggleClass('glyphicon-chevron-down glyphicon-chevron-up');
+}
+$('#accordion').on('hidden.bs.collapse', toggleChevron);
+$('#accordion').on('shown.bs.collapse', toggleChevron);
+</script>
+
+<style type="text/css">
+    
+    .panel-default>.panel-heading {
+        color: #333;
+        background-color: #fff !important;
+        border-color: #FFF!important;
+    }
+
+    i.indicator.glyphicon {
+        display: none;
+    }
+
+
+    div#accordion {
+        text-align: center;
+        border-color: #FFF;
+    }
+
+    .panel-default {
+        border-color: #FFF !important;
+    }
+
+    .contenedor-sub{
+        padding:30px;
+        padding-right: 200px;
+        padding-left: 200px;
+    }
+
+    .title-sub-subrayado {
+        font-size: 15px;
+        text-align: center;
+        border-style: dashed;
+        border-bottom: #000;
+        border-bottom-color: #000;
+        border-bottom-width: medium;
+        border-bottom-style: solid;
+        /* width: 250px; */
+        margin-bottom: 25px;
+    }
+
+  .subtitle-naranja {
+    font-size: 18px;
+    color: #E33126;
+    font-weight: bold;
+}
+
+.descargar-documento {
+    background-color: #E33126;
+    color: #FFF;
+    text-align: center;
+    height: 30px;
+    padding: 5px;
+    margin-top: 10px;
+    margin-bottom: 10px;
+}
+
+.panel-group .panel-heading+.panel-collapse .panel-body text-justify {
+     border-top: 1px solid #FFF !important;
+}
+
+@media (max-width: 768px) { 
+.title-sub-subrayado {
+    font-size: 20px !important;
+    text-align: center;
+    border-style: dashed;
+    border-bottom: #000;
+    border-bottom-color: #000;
+    border-bottom-width: medium;
+    border-bottom-style: solid;
+    /* width: 250px; */
+    margin-bottom: 25px;
+}
+}
+
+</style>
+</head>
+<body>
+<div class="contenido">  
+  <div class="menu-interno"> 
+      {% partial 'menu' %}
+  </div>   
+
+<div class="bannertop">  <img class="top-fixed-lider" src="{{ ('assets/images/banners/legislacion.png')|theme }}" style="display: block; margin: auto; width: 100%; max-width: 1280px; height=100%; " alt="bannertop"></div>
+<div class="blanco"> 
+
+<!--CONTENIDO-->
+
+<div class="contenedor-sub">
+<div class="texto_introduccion">
+  Aquí encontrarás en archivos PDF  leyes, decretos y acuerdos para descargarlos.
+</div>
+<div class="panel-group" id="accordion">
+  <div class="panel panel-default">
+    <div class="panel-heading titulos_legislacion">
+      <h4 class="panel-title">
+        <a class="accordion-toggle" data-toggle="collapse" data-parent="#accordion" href="#collapse_1">
+        <div class="title-sub-subrayado">DECISIÓN ANDINA 351 DE 1993</div>
+        </a><i class="indicator glyphicon glyphicon-chevron-down  pull-right"></i>
+      </h4>
+    </div>
+    <div id="collapse_1" class="panel-collapse collapse">
+      <div class="panel-body text-justify">
+        Régimen común sobre derecho de autor y derechos conexos, para los países de la Comunidad Andina (Perú, Bolivia, Ecuador y Colombia)<br>
+        <div class="descargar_documento">
+          <span>
+            <a href="{{ ('assets/documentos/legislacion/1_Decision-Andian-351-de-1993.pdf')|theme }}"><i class="fa fa-download"></i>descargar documento</a>
+          </span>
+        </div>
+      </div>
+    </div>
+  </div>
+  <div class="panel panel-default">
+    <div class="panel-heading titulos_legislacion">
+      <h4 class="panel-title">
+        <a class="accordion-toggle" data-toggle="collapse" data-parent="#accordion" href="#collapse_2">
+            <div class="title-sub-subrayado">LEY NÚMERO 23 DE 1982</div>
+        </a><i class="indicator glyphicon glyphicon-chevron-up  pull-right"></i>
+      </h4>
+    </div>
+    <div id="collapse_2" class="panel-collapse collapse">
+      <div class="panel-body text-justify">
+        (28 de enero de 1982) “Sobre derecho de autor”.<br>
+        <div class="descargar_documento">
+          <span>
+            <a href="{{ ('assets/documentos/legislacion/2_Ley-23-de-1982.pdf')|theme }}"><i class="fa fa-download"></i>descargar documento</a>
+          </span>
+        </div>
+      </div>
+    </div>
+  </div>
+  <div class="panel panel-default">
+    <div class="panel-heading titulos_legislacion">
+      <h4 class="panel-title">
+        <a class="accordion-toggle" data-toggle="collapse" data-parent="#accordion" href="#collapse_3">
+          <div class="title-sub-subrayado">LEY 44 DE 1993</div>
+        </a><i class="indicator glyphicon glyphicon-chevron-up pull-right"></i>
+      </h4>
+    </div>
+    <div id="collapse_3" class="panel-collapse collapse">
+      <div class="panel-body text-justify">
+        (Febrero 5) por la cual se modifica y adiciona la ley 23 de 1982 y se modifica la ley 29 de 1944.<br>
+        <div class="descargar_documento">
+          <span>
+            <a href="{{ ('assets/documentos/legislacion/3_Ley-44-de-1993.pdf')|theme }}"><i class="fa fa-download"></i>descargar documento</a>
+          </span>
+        </div>
+      </div>
+    </div>
+  </div>
+  <div class="panel panel-default">
+    <div class="panel-heading titulos_legislacion">
+      <h4 class="panel-title">
+        <a class="accordion-toggle" data-toggle="collapse" data-parent="#accordion" href="#collapse_4">
+          <div class="title-sub-subrayado">LEY 1403 DE 2010</div>
+        </a><i class="indicator glyphicon glyphicon-chevron-up pull-right"></i>
+      </h4>
+    </div>
+    <div id="collapse_4" class="panel-collapse collapse">
+      <div class="panel-body text-justify">
+        Por la cual se adiciona la ley 23 de 1982, sobre el derecho de autor, se establece una remuneración por comunicación pública a los artistas intérpretes o ejecutantes de obras y grabaciones audiovisuales o "LEY FANNY MIKEY".<br>
+        <div class="descargar_documento">
+          <span>
+            <a href="{{ ('assets/documentos/legislacion/4_ley1403-de-2010-pdf.pdf')|theme }}"><i class="fa fa-download"></i>descargar documento</a>
+          </span>
+        </div>
+      </div>
+    </div>
+  </div>
+  <div class="panel panel-default">
+    <div class="panel-heading titulos_legislacion">
+      <h4 class="panel-title">
+        <a class="accordion-toggle" data-toggle="collapse" data-parent="#accordion" href="#collapse_5">
+          <div class="title-sub-subrayado">DECRETO 3942 DE 2010</div>
+        </a><i class="indicator glyphicon glyphicon-chevron-up pull-right"></i>
+      </h4>
+    </div>
+    <div id="collapse_5" class="panel-collapse collapse">
+      <div class="panel-body text-justify">
+        Por el cual se reglamentan  las leyes 23 de 1982, 44 de 1993 y el artículo 2 literal c) de la ley 232 de 1995, en  relación con las sociedades de gestión colectiva de derechos de autor o de derechos conexos y la entidad  recaudadora y se dictan otras disposiciones.<br>
+        <div class="descargar_documento">
+          <span>
+            <a href="{{ ('assets/documentos/legislacion/5_Decreto-3942-de-2010.pdf')|theme }}"><i class="fa fa-download"></i>descargar documento</a>
+          </span>
+        </div>
+      </div>
+    </div>
+  </div>
+  <div class="panel panel-default">
+    <div class="panel-heading titulos_legislacion">
+      <h4 class="panel-title">
+        <a class="accordion-toggle" data-toggle="collapse" data-parent="#accordion" href="#collapse_6">
+          <div class="title-sub-subrayado">Decreto 19 de 2012</div>
+        </a><i class="indicator glyphicon glyphicon-chevron-up pull-right"></i>
+      </h4>
+    </div>
+    <div id="collapse_6" class="panel-collapse collapse">
+      <div class="panel-body text-justify">
+        Por el cual se dictan normas para suprimir o reformar regulaciones, procedimientos y trámites innecesarios existentes en la Administración Pública.<br>
+        <div class="descargar_documento">
+          <span>
+            <a href="{{ ('assets/documentos/legislacion/6_Decreto-19-de-2012.pdf')|theme }}"><i class="fa fa-download"></i>descargar documento</a>
+          </span>
+        </div>
+      </div>
+    </div>
+  </div>
+  <div class="panel panel-default">
+    <div class="panel-heading titulos_legislacion">
+      <h4 class="panel-title">
+        <a class="accordion-toggle" data-toggle="collapse" data-parent="#accordion" href="#collapse_7">
+          <div class="title-sub-subrayado">CONVENCIÓN DE ROMA, 1961</div>
+        </a><i class="indicator glyphicon glyphicon-chevron-up pull-right"></i>
+      </h4>
+    </div>
+    <div id="collapse_7" class="panel-collapse collapse">
+      <div class="panel-body text-justify">
+        Convención internacional sobre la protección de los artistas intérpretes o ejecutantes, los productores de fonogramas y los organismos de radiodifusión. (Aprobada por la Ley 48 de 1975).<br>
+        <div class="descargar_documento">
+          <span>
+            <a href="{{ ('assets/documentos/legislacion/7_Convencion-de-Roma-Ley-48-de-1975.pdf')|theme }}"><i class="fa fa-download"></i>descargar documento</a>
+          </span>
+        </div>
+      </div>
+    </div>
+  </div>
+  <div class="panel panel-default">
+    <div class="panel-heading titulos_legislacion">
+      <h4 class="panel-title">
+        <a class="accordion-toggle" data-toggle="collapse" data-parent="#accordion" href="#collapse_8">
+          <div class="title-sub-subrayado">TRATADO DE LA OMPI SOBRE INTERPRETACIÓN O EJECUCIÓN Y FONOGRAMAS  -TOIEF-</div>
+        </a><i class="indicator glyphicon glyphicon-chevron-up pull-right"></i>
+      </h4>
+    </div>
+    <div id="collapse_8" class="panel-collapse collapse">
+      <div class="panel-body text-justify">
+        ( Aprobado en por la Ley 545 de 1999) Adoptado en Ginebra el 20 de diciembre de 1996.<br>
+        <div class="descargar_documento">
+          <span>
+            <a href="{{ ('assets/documentos/legislacion/8_Tratado-de-la-OMPI-Derechos-Conexos-1996-LEY-545-de-1999.pdf')|theme }}"><i class="fa fa-download"></i>descargar documento</a>
+          </span>
+        </div>
+      </div>
+    </div>
+  </div>
+  <div class="panel panel-default">
+    <div class="panel-heading titulos_legislacion">
+      <h4 class="panel-title">
+        <a class="accordion-toggle" data-toggle="collapse" data-parent="#accordion" href="#collapse_9">
+          <div class="title-sub-subrayado">LEY 1493 DEL 2011 (26 de diciembre del 2011)</div>
+        </a><i class="indicator glyphicon glyphicon-chevron-up pull-right"></i>
+      </h4>
+    </div>
+    <div id="collapse_9" class="panel-collapse collapse">
+      <div class="panel-body text-justify">
+        Por la cual se toman medidas para formalizar el sector del espectáculo público de las artes escénicas, se otorgan competencias de inspección, vigilancia y control sobre las Sociedades de Gestión Colectiva y se dictan otras disposiciones.<br>
+        <div class="descargar_documento">
+          <span>
+            <a href="{{ ('assets/documentos/legislacion/9_ley-1493-de-2011.pdf')|theme }}"><i class="fa fa-download"></i>descargar documento</a>
+          </span>
+        </div>
+      </div>
+    </div>
+  </div>
+  <div class="panel panel-default">
+    <div class="panel-heading titulos_legislacion">
+      <h4 class="panel-title">
+        <a class="accordion-toggle" data-toggle="collapse" data-parent="#accordion" href="#collapse_10">
+          <div class="title-sub-subrayado">TRATADO DE BEIJING</div>
+        </a><i class="indicator glyphicon glyphicon-chevron-up pull-right"></i>
+      </h4>
+    </div>
+    <div id="collapse_10" class="panel-collapse collapse">
+      <div class="panel-body text-justify">
+        Tratado de Beijing sobre interpretaciones y ejecuciones audiovisuales.<br>
+        <div class="descargar_documento">
+          <span>
+            <a href="{{ ('assets/documentos/legislacion/10_TRATADO-DE-BEIJING-SOBRE-INTERPRETACIONES-Y-EJECUCIONES-AUDIOVISUALES.pdf')|theme }}"><i class="fa fa-download"></i>descargar documento</a>
+          </span>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+</div>
+{% partial 'footer'   %}
+<!--FIN CONTENIDO-->
+</div>
+</div>
+
+
+    <script src="{{ [
+        'assets/js/vendor/jquery-1.11.0.min.js',
+        'assets/js/bootstrap.js',
+        'assets/js/plugins.js',
+        'assets/js/main.js',
+        '@framework',
+        '@framework.extras']|theme }}"></script>
+
+
+
+</body>
+</html>

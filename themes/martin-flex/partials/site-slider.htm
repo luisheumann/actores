@@ -1,0 +1,33 @@
+==
+<?php
+function onStart() {
+
+    $this['slides'] = [
+        ['image' => 'home.png', 'title' => 'Digital Studio'      , 'caption' => 'Let us design your website'           , 'button' => 'Responsive Template', 'link' => '#'],
+    ];
+
+}
+?>
+==
+<div class="site-slider hidden-xs">
+    <div class="slider">
+        <div class="flexslider">
+            <ul class="slides"> 
+            {% for slide in slides %}
+                <li>
+                    <div class="overlay"></div>
+                    <img class="img-responsive" src="{{ ('assets/images/banners/' ~ slide['image']) |theme }}" alt="{{ slide['title '] }}">
+                    <div class="slider-caption visible-md visible-lg">
+                        <h2>{{ slide['title']   }}</h2>
+                        <p>{{  slide['caption'] }}</p>
+                        <a href="{{ slide['link'] }}" class="slider-btn">{{ slide['button'] }}</a>
+                    </div>
+                </li>
+            {% endfor %}
+            </ul>
+        </div>
+    </div>
+</div>
+<div class="visible-xs">
+    <img class="img-responsive" src="{{ ('assets/images/banners/home_movil.jpg') |theme }}">
+</div>

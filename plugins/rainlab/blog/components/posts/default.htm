@@ -1,0 +1,17 @@
+{% set posts = __SELF__.posts %}
+<ul class="pgwSlider">
+    {% for post in posts %}
+        <li>
+            {% if post.featured_images.count %}
+                {% for image in post.featured_images %}
+                        <img
+                            data-src="{{ image.filename }}"
+                            src="{{ image.path }}"
+                            alt="{{ image.description }}"
+                             />
+                {% endfor %}
+            {% endif %}
+            <span class="title_noticia"><a href="{{ post.url }}">"{{ post.title }}"</a></span>
+        </li>
+    {% endfor %}
+</ul>

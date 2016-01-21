@@ -1,0 +1,436 @@
+<!DOCTYPE html>
+<head>
+    <meta charset="utf-8">
+    <title>{{ this.page.title }}</title>
+    <meta name="description" content="">
+    <meta name="viewport" content="width=device-width">
+
+
+    {% partial 'header-interno'   %}
+
+
+    <script type="text/javascript">
+
+        function toggleChevron(e) {
+            $(e.target)
+            .prev('.panel-heading')
+            .find("i.indicator")
+            .toggleClass('glyphicon-chevron-down glyphicon-chevron-up');
+        }
+        $('#accordion').on('hidden.bs.collapse', toggleChevron);
+        $('#accordion').on('shown.bs.collapse', toggleChevron);
+    </script>
+
+    <style type="text/css">
+
+
+
+
+        /* STILOS SUB MENU*/
+
+
+
+        .panel-default>.panel-heading {
+            color: #333;
+            background-color: #fff !important;
+            border-color: #FFF!important;
+        }
+
+        i.indicator.glyphicon {
+            display: none;
+        }
+
+
+        div#accordion {
+            text-align: center;
+            border-color: #FFF;
+        }
+
+        .panel-default {
+            border-color: #FFF !important;
+        }
+
+        .contenedor-sub{
+          /*  padding:30px;*/
+
+      }
+
+      .title-sub-subrayado {
+        font-size: 40px;
+        text-align: center;
+        border-style: dashed;
+        border-bottom: #000;
+        border-bottom-color: #000;
+        border-bottom-width: medium;
+        border-bottom-style: solid;
+        /* width: 250px; */
+        margin-bottom: 25px;
+    }
+
+    .subtitle-naranja {
+        font-size: 18px;
+        color: #E33126;
+        font-weight: bold;
+    }
+
+    .descargar-documento {
+        background-color: #E33126;
+        color: #FFF;
+        text-align: center;
+        height: 30px;
+        padding: 5px;
+        margin-top: 10px;
+        margin-bottom: 10px;
+    }
+
+    .panel-group .panel-heading+.panel-collapse .panel-body {
+       border-top: 1px solid #FFF !important;
+   }
+
+   .nav-tabs>li {
+    float: left;
+    margin-bottom: -1px;
+    background-color: #E3147E;
+    color: #FFF;
+    width: 640px;
+    position: relative;
+    z-index: -1;
+    height: 70px;
+
+}
+
+.nav-tabs>li a{
+    float: left;
+    margin-bottom: -1px;
+    background-color: #AF1865;
+    color: #FFF;
+    width: 640px;
+    border-left-style: solid;
+    border-left-color: #fff;
+    height: 70px;
+    padding: 13px;
+    font-size: 25px;
+    margin: auto;
+    padding-left: 260px;
+}
+.nav-tabs>li.active>a, .nav-tabs>li.active>a:hover, .nav-tabs>li.active>a:focus {
+    color: #FFF;
+    background-color: #E3147E;
+    border: 1px solid #ddd;
+    border-bottom-color: transparent;
+    cursor: default;
+    padding: 13px;
+    font-size: 25px;
+    margin: auto;
+    padding-left: 260px;
+}
+
+div#myCarousel {
+    height: 100% !important;
+    
+}
+
+.contenedor-slider{
+    width: 300px;
+    height: 300px;
+    background-color: #000;
+}
+
+span.glyphicon.glyphicon-chevron-right{
+    display: none;
+}
+span.glyphicon.glyphicon-chevron-left{
+ display: none; 
+}
+
+.otro {
+    position: relative;
+    z-index: -2;
+}
+
+ul.nav.nav-tabs {
+    position: relative;
+    z-index: 0;
+}
+.title-slider {
+    font-size: 20px;
+    color: #21A098;
+    font-weight: bold;
+}
+
+
+div#myCarousel {
+    padding: 30px;
+}
+
+.carousel-indicators li {
+
+    border: 1px solid #21A098;
+
+}
+
+ol.carousel-indicators {
+    position: relative;
+}
+
+.service-item .service-icon {
+    font-size: 1em !important;
+    padding: 0px !important;
+    background-color: #DCDA2F;
+
+    width: 256px;
+    line-height: 90px;
+    height: 96px;
+    transition: all linear 0.5s;
+
+    
+}
+
+
+
+
+.service-item .service-icon a{
+    font-size: 1em !important;
+    padding: 0px !important;
+    background-color: #DCDA2F;
+    width: 256px;
+    transition: all linear 0.1s;
+
+
+
+}
+
+
+.inner-service{
+   background-color: #DCDA2F !important;
+   height: 160px;
+   width: 256;
+   transition: all linear 0.5s;
+
+}
+
+.inner-service a{
+   background-color: #DCDA2F !important;
+   height: 160px;
+   transition: all linear 0.5s;
+
+}
+
+.service-content {
+   background-color: #DCDA2F !important;
+   transition-property: width;
+   transition-duration: 2s;
+   transition-timing-function: linear;
+   transition-delay: 1s;
+}
+
+.service-content a:hover{
+ background-color: #DCDA2F !important;
+ transition: all linear 0.5s;
+}
+
+.service-icon{
+ background-color: #DCDA2F !important;
+ width: 100px;
+ height: 100px;
+}
+
+.service-icon a{
+ background-color: #DCDA2F !important;
+ transition: all linear 0.5s;
+}
+
+#service-1 {
+    background-color: transparent !important;
+    transition: all linear 0.5s;
+}
+
+.service-item .service-content {
+    padding:0px !important;
+}
+
+.salud{
+
+    background-color: #21A098 !important;
+}
+
+.btn-circle.btn-xl {
+  width: 200px;
+  height: 200px;
+  padding: 10px 16px;
+  font-size: 24px;
+  line-height: 1.33;
+  border-radius: 50%;
+}
+.convenio_1 {
+    background-image: url('{{ ('assets/images/convenios/colsanitas.png')|theme }}');
+}
+.convenio_2 {
+    background-image: url('{{ ('assets/images/convenios/compensar.png')|theme }}');
+}
+.convenio_3 {
+    background-image: url('{{ ('assets/images/convenios/marlon_becerra.png')|theme }}');
+}
+.contenedor-sub-socio {
+    padding: 60px;
+}
+.contenedor-row-1 {
+    margin-bottom: 20px;
+    height: 200px;
+}
+
+.circle-submenu1 {
+    width: 230px;
+    float: left;
+    height: 200px;
+}
+
+
+
+.text-sublink {
+    padding-top: 30px;
+}
+
+.link-vermas {
+    FONT-WEIGHT: bold;
+}
+
+.text-convenios-alianzas {
+    font-size: 43px;
+    color: #E3147E;
+    font-weight: bold;
+    border-bottom-style: solid;
+    border-bottom-color: #E3147E;
+    border-bottom-width: 1px;
+    width: 700px;
+    text-align: center;
+    margin-left: auto;
+    margin-right: auto;
+    margin-top: 20px;
+}
+
+
+@media (max-width: 768px) { 
+
+
+    .text-convenios-alianzas {
+        font-size: 16px;
+        color: #E3147E;
+        font-weight: bold;
+        border-bottom-style: solid;
+        border-bottom-color: #E3147E;
+        border-bottom-width: 1px;
+        width: 100%;
+        text-align: center;
+        margin-left: auto;
+        margin-right: auto;
+        margin-top: 20px;
+    }
+
+
+    .btn-circle.btn-xl {
+        width: 90px;
+        height: 90px;
+        padding: 10px 16px;
+        font-size: 10px;
+        line-height: 1.33;
+        border-radius: 50%;
+    }
+    .circle-submenu1 {
+        width: 100px;
+        float: left;
+        height: 100px;
+    }
+
+    .text-sublink {
+        padding-top: 20px;
+    }
+
+
+    .contenedor-row-1 {
+        margin-bottom: 20px;
+        height: 90px;
+    }
+
+}
+</style>
+</head>
+<body>
+    <div class="contenido">  <div class="menu-interno"> 
+       {% partial 'menu'   %}
+   </div> 
+   <div class="sin_banner"> 
+
+    <!--CONTENIDO--> 
+    <div class="text-convenios-alianzas">CONVENIOS Y ALIANZAS</div>
+
+    <div class="contenedor-sub">
+        <div class="contenedor-row-1">
+            <div class="circle-submenu1">
+                <button type="button" class="btn btn-default btn-circle btn-xl convenio_1"></button>
+            </div>
+            <div class="text-sublink">
+             <h1>Colsanitas</h1>
+                 Acceso a una tarifa preferencial de vinculación al servicio de medicina prepagada.<br>
+                 <strong>Contacto:<br></strong>
+                 SANIMED LTDA., César Augusto López Cardona, Gerente Comercial.<br>
+                 Tel: (571)610 8933 – (57)314 3302342 / (57)317 441 2719.
+            </div>
+        </div>
+        <div class="contenedor-row-1">
+            <div class="circle-submenu1">
+                <button type="button" class="btn btn-default btn-circle btn-xl convenio_2"></button>
+            </div>
+            <div class="text-sublink">
+             <h1>Compensar</h1>
+                 Acceso a servicios de capacitación, recreación y turismo en todas la sedes de Bogotá y fuera de ella, a través de los   convenios con otras cajas de compensación.<br>
+                 <strong>Contacto:<br></strong>
+                 Leidy Rodríguez, Trabajadora Social ACTORES S.C.G.<br>
+                 Tel: (571)5205194, Ext. 107.
+            </div>
+        </div>
+        <div class="contenedor-row-1">
+            <div class="circle-submenu1">
+                <button type="button" class="btn btn-default btn-circle btn-xl convenio_3"></button>
+            </div>
+            <div class="text-sublink">
+             <h1>Marlon Becerra</h1>
+                 Descuentos en servicios odontológicos en la sede de Suba<br>
+                 <strong>Contacto:<br></strong>
+                 Odontología de Marlon Becerra (Sede Suba)<br>
+                 PBX: 6033232 Cr 106 No. 149 -27 C.C Plaza Imperial L 2-50
+            </div>
+        </div>
+    </div>
+</div>
+
+<script>
+    $(document).ready(function(){
+        $(".nav-tabs a").click(function(){
+            $(this).tab('show');
+        });
+    });
+</script>
+
+
+</div>
+
+</div>
+{% partial 'footer'   %}
+<!--FIN CONTENIDO-->
+</div>
+</div>
+
+
+<script src="{{ [
+    'assets/js/vendor/jquery-1.11.0.min.js',
+    'assets/js/bootstrap.js',
+    'assets/js/plugins.js',
+    'assets/js/main.js',
+    '@framework',
+    '@framework.extras']|theme }}"></script>
+
+
+
+</body>
+</html>

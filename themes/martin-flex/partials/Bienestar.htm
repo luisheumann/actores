@@ -1,0 +1,182 @@
+<!DOCTYPE html>
+<head>
+    <meta charset="utf-8">
+    <title>{{ this.page.title }}</title>
+    <meta name="description" content="">
+    <meta name="viewport" content="width=device-width">
+
+
+{% partial 'header-interno'   %}
+
+
+<script type="text/javascript">
+    
+    function toggleChevron(e) {
+    $(e.target)
+        .prev('.panel-heading')
+        .find("i.indicator")
+        .toggleClass('glyphicon-chevron-down glyphicon-chevron-up');
+}
+$('#accordion').on('hidden.bs.collapse', toggleChevron);
+$('#accordion').on('shown.bs.collapse', toggleChevron);
+</script>
+
+<style type="text/css">
+    
+    .panel-default>.panel-heading {
+        color: #333;
+        background-color: #fff !important;
+        border-color: #FFF!important;
+    }
+
+    i.indicator.glyphicon {
+        display: none;
+    }
+
+
+    div#accordion {
+        text-align: center;
+        border-color: #FFF;
+    }
+
+    .panel-default {
+        border-color: #FFF !important;
+    }
+
+    .contenedor-sub{
+        padding:30px;
+        padding-right: 200px;
+        padding-left: 200px;
+    }
+
+    .title-sub-subrayado {
+        font-size: 40px;
+        text-align: center;
+        border-style: dashed;
+        border-bottom: #000;
+        border-bottom-color: #000;
+        border-bottom-width: medium;
+        border-bottom-style: solid;
+        /* width: 250px; */
+        margin-bottom: 25px;
+    }
+
+  .subtitle-naranja {
+    font-size: 18px;
+    color: #E33126;
+    font-weight: bold;
+}
+
+.descargar-documento {
+    background-color: #E33126;
+    color: #FFF;
+    text-align: center;
+    height: 30px;
+    padding: 5px;
+    margin-top: 10px;
+    margin-bottom: 10px;
+}
+
+.panel-group .panel-heading+.panel-collapse .panel-body {
+     border-top: 1px solid #FFF !important;
+}
+
+
+
+
+</style>
+</head>
+<body>
+
+
+   
+   
+   
+
+<div class="contenido">  <div class="menu-interno"> 
+     <img class="logoheader-all" style="float:left;height: 96px;" src="/themes/martin-flex/assets/images/logoheader.gif" alt="logo"> {% partial 'menu'   %}
+     </div>   
+
+     <div class="bannertop">  <img width="1280px"  src="/themes/martin-flex/assets/images/slide2.jpg" alt="bannertop"></div>
+<div class="blanco"> 
+
+<!--CONTENIDO--> 
+
+<div class="contenedor-sub">
+
+<ul class="nav nav-tabs">
+  <li role="presentation" class="active"><a href="#">Home</a></li>
+  <li role="presentation"><a href="#">Profile</a></li>
+  <li role="presentation"><a href="#">Messages</a></li>
+</ul>
+
+
+<div class="panel-group" id="accordion">
+  <div class="panel panel-default">
+    <div class="panel-heading">
+      <h4 class="panel-title">
+        <a class="accordion-toggle" data-toggle="collapse" data-parent="#accordion" href="#collapseOne">
+        <div class="title-sub-subrayado">COPY</div>
+        </a><i class="indicator glyphicon glyphicon-chevron-down  pull-right"></i>
+      </h4>
+    </div>
+    <div id="collapseOne" class="panel-collapse collapse in">
+      <div class="panel-body">
+        Anim pariatur cliche reprehenderit, enim eiusmod high life accusamus terry richardson ad squid. 3 wolf moon officia aute, non cupidatat skateboard dolor brunch. Food truck quinoa nesciunt laborum eiusmod. Brunch 3 wolf moon tempor, sunt aliqua put a bird on it squid single-origin coffee nulla assumenda shoreditch et. Nihil anim keffiyeh helvetica, craft beer labore wes anderson cred nesciunt sapiente ea proident. Ad vegan excepteur butcher vice lomo. Leggings occaecat craft beer farm-to-table, raw denim aesthetic synth nesciunt you probably haven't heard of them accusamus labore sustainable VHS.
+      </div>
+    </div>
+  </div>
+  <div class="panel panel-default">
+    <div class="panel-heading">
+      <h4 class="panel-title">
+        <a class="accordion-toggle" data-toggle="collapse" data-parent="#accordion" href="#collapseTwo">
+            <div class="title-sub-subrayado">COPY</div>
+        </a><i class="indicator glyphicon glyphicon-chevron-up  pull-right"></i>
+      </h4>
+    </div>
+    <div id="collapseTwo" class="panel-collapse collapse">
+      <div class="panel-body">
+        Anim pariatur cliche reprehenderit, enim eiusmod high life accusamus terry richardson ad squid. 3 wolf moon officia aute, non cupidatat skateboard dolor brunch. Food truck quinoa nesciunt laborum eiusmod. Brunch 3 wolf moon tempor, sunt aliqua put a bird on it squid single-origin coffee nulla assumenda shoreditch et. Nihil anim keffiyeh helvetica, craft beer labore wes anderson cred nesciunt sapiente ea proident. Ad vegan excepteur butcher vice lomo. Leggings occaecat craft beer farm-to-table, raw denim aesthetic synth nesciunt you probably haven't heard of them accusamus labore sustainable VHS.
+      </div>
+    </div>
+  </div>
+  <div class="panel panel-default">
+    <div class="panel-heading">
+      <h4 class="panel-title">
+        <a class="accordion-toggle" data-toggle="collapse" data-parent="#accordion" href="#collapseThree">
+          <div class="title-sub-subrayado">COPY</div>
+        </a><i class="indicator glyphicon glyphicon-chevron-up pull-right"></i>
+      </h4>
+    </div>
+    <div id="collapseThree" class="panel-collapse collapse">
+      <div class="panel-body">
+        Anim pariatur cliche reprehenderit, enim eiusmod high life accusamus terry richardson ad squid. 3 wolf moon officia aute, non cupidatat skateboard dolor brunch. Food truck quinoa nesciunt laborum eiusmod. Brunch 3 wolf moon tempor, sunt aliqua put a bird on it squid single-origin coffee nulla assumenda shoreditch et. Nihil anim keffiyeh helvetica, craft beer labore wes anderson cred nesciunt sapiente ea proident. Ad vegan excepteur butcher vice lomo. Leggings occaecat craft beer farm-to-table, raw denim aesthetic synth nesciunt you probably haven't heard of them accusamus labore sustainable VHS.
+      </div>
+    </div>
+  </div>
+</div>
+
+
+
+
+
+
+</div>
+
+<!--FIN CONTENIDO-->
+</div>
+</div>
+
+
+    <script src="{{ [
+        'assets/js/vendor/jquery-1.11.0.min.js',
+        'assets/js/bootstrap.js',
+        'assets/js/plugins.js',
+        'assets/js/main.js',
+        '@framework',
+        '@framework.extras']|theme }}"></script>
+
+
+
+</body>
+</html>

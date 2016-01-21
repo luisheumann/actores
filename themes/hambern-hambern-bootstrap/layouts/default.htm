@@ -1,0 +1,52 @@
+==
+<!doctype html>
+
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+
+    <title>{{ this.page.title }}</title>
+    <meta name="description" content="{{ this.page.description }}">
+    <meta name="author" content="">
+
+    {% styles %}
+    <link href="{{ [
+        'assets/vendor/animate.css/animate.min.css',
+        'assets/less/bootstrap.less',
+        'assets/less/font-awesome.less',
+        'assets/vendor/bootstrap/dist/css/bootstrap-theme.min.css',
+        'assets/vendor/summernote/dist/summernote.css',
+    ]|theme }}" rel="stylesheet">
+
+    <!--[if lt IE 9]>
+    <script src="http://html5shiv.googlecode.com/svn/trunk/html5.js"></script>
+    <![endif]-->
+</head>
+
+<body>
+
+{% page %}
+
+<script src="{{ [
+            '@jquery',
+            'assets/vendor/bootstrap/js/transition.js',
+            'assets/vendor/bootstrap/js/alert.js',
+            'assets/vendor/bootstrap/js/button.js',
+            'assets/vendor/bootstrap/js/carousel.js',
+            'assets/vendor/bootstrap/js/collapse.js',
+            'assets/vendor/bootstrap/js/dropdown.js',
+            'assets/vendor/bootstrap/js/modal.js',
+            'assets/vendor/bootstrap/js/tooltip.js',
+            'assets/vendor/bootstrap/js/popover.js',
+            'assets/vendor/bootstrap/js/scrollspy.js',
+            'assets/vendor/bootstrap/js/tab.js',
+            'assets/vendor/bootstrap/js/affix.js',
+            'assets/vendor/wow/dist/wow.min.js',
+            'assets/vendor/holderjs/holder.min.js',
+            'assets/vendor/summernote/dist/summernote.min.js',
+            'assets/js/scripts.js',
+        ]|theme }}"></script>
+{% framework extras %}
+{% scripts %}
+</body>
+</html>

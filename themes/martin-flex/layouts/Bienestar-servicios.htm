@@ -1,0 +1,1696 @@
+<!DOCTYPE html>
+<head>
+    <meta charset="utf-8">
+    <title>{{ this.page.title }}</title>
+    <meta name="description" content="">
+    <meta name="viewport" content="width=device-width">
+
+
+    {% partial 'header-interno'   %}
+
+
+    <script type="text/javascript">
+
+        function toggleChevron(e) {
+            $(e.target)
+            .prev('.panel-heading')
+            .find("i.indicator")
+            .toggleClass('glyphicon-chevron-down glyphicon-chevron-up');
+        }
+        $('#accordion').on('hidden.bs.collapse', toggleChevron);
+        $('#accordion').on('shown.bs.collapse', toggleChevron);
+    </script>
+
+    <style type="text/css">
+
+
+
+
+        /* STILOS SUB MENU*/
+
+        @media (min-width: 768px) and (max-width: 2000px) {
+           .sub-menu-app > nav > ul {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: flex-start;
+            list-style: none;
+            margin: 0;
+            padding: 0;
+            z-index: 1000;
+        }
+
+        .sub-menu-app > nav > ul > li {
+            flex: 0 1 auto;
+            margin: 0;
+            padding: 0;
+            position: relative;
+            transition: all linear 0.1s; 
+            z-index: 1000;   
+        }
+
+        /*  header > nav > ul > li:hover {
+                background: rgba(58,162,173,1);
+            }
+            */
+            .sub-menu-app > nav > ul > li a + div {
+                /*background: linear-gradient(to bottom,rgba(58,162,173,1) 0,rgba(62,188,207,0.96) 100%);;*/
+                border-radius: 0 0 2px 2px;
+                box-shadow: 0 3px 1px rgba(0,0,0,.05);
+                display: none;
+                font-size: 1rem;
+                position: absolute;
+                width: 195px;
+            }
+            
+            .sub-menu-app > nav > ul > li:hover a + div {
+                display: block;
+            }
+
+            .sub-menu-app > nav > ul > li a + div > ul {
+                list-style-type: none;  
+            }
+
+            .sub-menu-app > nav > ul > li a + div > ul > li {
+                margin: 0;
+                padding: 0;
+            }
+
+                    /*  header > nav > ul > li a + div > ul > li > a {
+                            color: rgba(255,255,255,.9);
+                            display: block; 
+                            font-size: .75rem;
+                            letter-spacing: 1.5px;
+                            padding: .25rem 1.5rem;
+                            text-decoration: none;
+                            text-transform: uppercase;
+                        }*/
+                        /*
+                            header > nav > ul > li a + div > ul > li:hover > a {
+                                background-color: rgba(0,0,0,.15);  
+                            }*/
+
+                            .sub-menu-app > nav > ul > li > a {
+                                align-items: flex-start;
+                                color: #fff;
+                                display: flex;
+                                font-size: 1.55rem;
+                                font-weight: 200;
+                                letter-spacing: 1px;
+                                max-width: 130px;
+                                /*  padding: 1rem 1.5rem;*/
+                                width: 256px;
+                                text-decoration: none;
+                                text-shadow: 0 1px 1px rgba(0,0,0,.1);
+                                transition: all linear 0.1s;
+
+                            }
+
+            /*  header > nav > ul > li > a > div > span {
+                    color: rgba(255,255,255,.75);
+                    display: block;
+                    font-family: Georgia, "Times New Roman", Times, serif;
+                    font-size: .7rem;   
+                    font-style: italic;
+                    line-height: 1rem;
+                    max-width: 260px;
+                }*/
+
+                @media (min-width: 10px) {
+                    .sub-menu-app > nav > ul > li > a {
+                        max-width: 500px;
+                        font-size: 1.7rem;                       
+                        height: 96px;
+                        line-height: 90px;
+                    }
+                }
+                .sub-menu-app > nav > ul > li > a > div > span {
+                    margin: 4px 0 0;  
+                }
+
+
+                li.menu-quienes {
+                    background-color: #dcda2f;
+                }
+
+                li.menu-noticias {
+                    background-color: #fbc22d;
+                    list-style:none;
+                    padding: 18px;
+
+                }
+
+                li.menu-noticias :hover {
+
+                    color: #FFF;
+                    list-style:none;
+                    z-index: 1000;
+
+                }
+
+
+
+                ul.menu-sub-bienestar {
+
+                    width: 180px;
+                    float: left;
+                    list-style:none;
+                    z-index: 1000;
+
+                }
+
+                .div-menu-sub-bienestar{
+                    float: left;
+                    padding-top: 50px;
+                    list-style:none;
+                    z-index: 1000;
+                    
+
+                }
+
+
+                ul.menu-sub-noticias {
+
+                    width: 180px;
+                    float: left;
+                    list-style:none;
+                    z-index: 1000;
+
+                }
+
+                .div-menu-sub-noticias{
+                    float: left;
+                    padding-top: 50px;
+                    list-style:none;
+                    z-index: 1000;
+
+
+                }
+
+                ul.menu-sub-noticias-sub {
+
+                    width: 180px;
+                    float: right;
+                    padding-top: 50px;
+                    list-style:none;
+                    z-index: 1000;
+
+
+                }
+                .contenerdor-sub-noticia{
+                    background-color: rgba(255, 202, 0, 0.58);
+                    list-style:none;
+                    width: 500px !important;
+                    padding:10px;
+                    text-decoration: none;
+                    text-transform: none;
+                    z-index: 1000;
+
+                }
+
+                .contenerdor-sub-noticia li:hover > a{
+                    list-style:none;
+                    width: 600px !important;
+                    padding:10px;
+                    text-decoration: none;
+                    text-transform: none;
+                    z-index: 1000;
+
+
+                }
+
+
+                .menusubnoticia{
+                    float: right;
+                    list-style:none;
+                    z-index: 1000;
+
+                }
+
+
+
+                li.menu-legislacion {
+                    background-color: #e33126;
+                    padding: 18px;
+                }
+                li.menu-bienestar {
+                    background-color: #e3147e;
+
+                }
+
+
+                li.menu-socio {
+                    background-color: #21a098;
+                    padding: 18px;
+                }
+
+
+                li.menu-contacto {
+                    background-color: #652981;
+                    padding: 18px;
+                }
+
+                a:link   
+                {   
+                    text-decoration:none;   
+                } 
+
+                .center-block {
+                  display: block;
+                  margin-left: auto;
+                  margin-right: auto;
+              }
+                 /* div#menu {
+                    width: 1090px;
+                }*/
+
+                .content-section {
+                    margin-top: 0px !important;
+                    padding-top:0px !important;
+                }
+                .contenido {
+                    width: 1280px;
+                    margin-left: auto;
+                    margin-right: auto;
+                    padding-top: 1px;
+                    z-index: 200000;
+
+                }
+
+                .menu-interno {
+                    margin-left: auto;
+                    margin-right: auto;
+                    width: 1300px;
+                    position: fixed;
+                    top: 0px;
+                }
+
+                nav {
+                    background-color: #FFF;
+                }
+
+
+                /* END SUB MENU*/
+
+            }
+
+            .panel-default>.panel-heading {
+                color: #333;
+                background-color: #fff !important;
+                border-color: #FFF!important;
+            }
+
+            i.indicator.glyphicon {
+                display: none;
+            }
+
+
+            div#accordion {
+                text-align: center;
+                border-color: #FFF;
+            }
+
+            .panel-default {
+                border-color: #FFF !important;
+            }
+
+            .contenedor-sub{
+              /*  padding:30px;*/
+
+          }
+
+          .title-sub-subrayado {
+            font-size: 40px;
+            text-align: center;
+            border-style: dashed;
+            border-bottom: #000;
+            border-bottom-color: #000;
+            border-bottom-width: medium;
+            border-bottom-style: solid;
+            /* width: 250px; */
+            margin-bottom: 25px;
+        }
+
+        .subtitle-naranja {
+            font-size: 18px;
+            color: #E33126;
+            font-weight: bold;
+        }
+
+        .descargar-documento {
+            background-color: #E33126;
+            color: #FFF;
+            text-align: center;
+            height: 30px;
+            padding: 5px;
+            margin-top: 10px;
+            margin-bottom: 10px;
+        }
+
+        .panel-group .panel-heading+.panel-collapse .panel-body {
+           border-top: 1px solid #FFF !important;
+       }
+
+       .nav-tabs>li {
+        float: left;
+        margin-bottom: -1px;
+        background-color: #E3147E;
+        color: #FFF;
+        width: 640px;
+        position: relative;
+        z-index: -1;
+        height: 50px;
+        line-height: 0.7 !important;
+    }
+
+    .nav-tabs>li a{
+        float: left;
+        margin-bottom: -1px;
+        background-color: #AF1865;
+        color: #FFF;
+        width: 640px;
+        border-left-style: solid;
+        border-left-color: #fff;
+        height: 50px;
+        padding: 13px;
+        font-size: 25px;
+        margin: auto;
+        padding-left: 260px;
+        line-height: 0.7 !important;
+    }
+    .nav-tabs>li.active>a, .nav-tabs>li.active>a:hover, .nav-tabs>li.active>a:focus {
+        color: #FFF;
+        background-color: #E3147E;
+        border: 1px solid #ddd;
+        border-bottom-color: transparent;
+        cursor: default;
+        padding: 13px;
+        font-size: 25px;
+        margin: auto;
+        padding-left: 260px;
+        line-height: 0.7 !important;
+    }
+
+    div#myCarousel {
+        height: 100% !important;    
+    }
+
+    .contenedor-slider{
+        width: 300px;
+        height: 300px;
+        background-color: #000;
+    }
+
+    span.glyphicon.glyphicon-chevron-right{
+        display: none;
+    }
+    span.glyphicon.glyphicon-chevron-left{
+     display: none; 
+ }
+
+ .otro {
+    position: relative;
+    z-index: -2;
+}
+
+ul.nav.nav-tabs {
+    position: relative;
+    z-index: 0;
+}
+.title-slider {
+    font-size: 20px;
+    color: #21A098;
+    font-weight: bold;
+}
+
+
+div#myCarousel {
+    padding: 30px;
+}
+
+.carousel-indicators li {
+    border: 1px solid #21A098;
+}
+
+ol.carousel-indicators {
+    position: relative;
+}
+
+.service-item .service-icon {
+    font-size: 1em !important;
+    padding: 0px !important;
+    background-color: #DCDA2F;
+    width: 256px;
+    line-height: 90px;
+    height: 96px;
+    transition: all linear 0.5s;    
+}
+.service-item .service-icon a{
+    font-size: 1em !important;
+    padding: 0px !important;
+    background-color: #DCDA2F;
+    width: 256px;
+    transition: all linear 0.1s;
+}
+
+
+.inner-service{
+    background-color: #DCDA2F !important;
+    height: 160px;
+    width: 256;
+    transition: all linear 0.5s;
+}
+
+.inner-service a{
+    background-color: #DCDA2F !important;
+    height: 160px;
+    transition: all linear 0.5s;  
+}
+
+.service-content {
+    background-color: #DCDA2F !important;
+    transition-property: width;
+    transition-duration: 2s;
+    transition-timing-function: linear;
+    transition-delay: 1s;
+}
+
+.service-content a:hover{
+ background-color: #DCDA2F !important;
+ transition: all linear 0.5s;
+}
+
+.service-icon{
+ background-color: #DCDA2F !important;
+ width: 100px;
+ height: 100px;
+}
+
+.service-icon a{
+ background-color: #DCDA2F !important;
+ transition: all linear 0.5s;
+}
+
+#service-1 {
+    background-color: transparent !important;
+    transition: all linear 0.5s;
+}
+
+.service-item .service-content {
+    padding:0px !important;
+}
+
+.salud{
+
+    background-color: #21A098 !important;
+}
+
+.btn-circle.btn-xl {
+  width: 200px;
+  height: 200px;
+  padding: 10px 16px;
+  font-size: 24px;
+  line-height: 1.33;
+  border-radius: 50%;
+}
+
+
+.contenedor-sub-socio {
+    padding: 60px;
+}
+.contenedor-row-1 {
+    margin-bottom: 20px;
+    height: 200px;
+}
+
+.circle-submenu1 {
+    width: 230px;
+    float: left;
+    height: 200px;
+}
+
+.text-sublink {
+    padding-top: 68px;
+}
+
+.link-vermas {
+    FONT-WEIGHT: bold;
+}
+
+
+.contenedor-sub {
+    padding: 0px !important;
+    padding-right: 0px !important;
+    padding-left: 0px !important; 
+}
+
+
+@media (max-width: 768px) { 
+
+    .contenedor-sub-socio {
+        padding: 10px;
+    }
+
+
+    .btn-circle.btn-xl {
+        width: 80px;
+        height: 80px;
+        padding: 10px 16px;
+        font-size: 10px;
+        line-height: 1.33;
+        border-radius: 50%;
+    }
+
+    .circle-submenu1 {
+        width: 90px;
+        float: left;
+        height: 110px;
+    }
+
+    .text-sublink {
+        padding-top: 20px;
+    }
+
+
+    .contenedor-row-1 {
+        margin-bottom: 20px;
+        height: 90px;
+    }
+    li.menu-socio {
+        background-color: #21a098;
+        padding: 18px;
+    }
+    li.menu-legislacion {
+        background-color: #e33126;
+        padding: 18px;
+    }
+    li.menu-bienestar {
+        background-color: #e3147e;
+        padding:10px;
+
+    }
+
+    li.menu-legislacion {
+        background-color: #e33126;
+        padding: 0px;
+        text-align: center;
+        color: #FFF !important;
+        padding:10px;
+    }
+
+    li.menu-socio {
+        background-color: #21a098;
+        padding: 10px;
+        color: #FFF;
+        text-align: center;
+    }
+
+
+
+
+
+
+
+    li.menu-bienestar {
+        background-color: #e3147e;
+        padding: 0px;
+        color: #FFF;
+        text-align: center;
+        padding: 10px;
+    }
+
+
+    li.menu-bienestar a{
+
+        color: #FFF;
+        text-align: center;
+    }
+
+
+    .service-item:hover .service-icon {
+
+    }
+
+
+
+    li.menu-legislacion a{
+        background-color: #e33126;
+        padding: 0px;
+        text-align: center;
+        color: #FFF !important;
+        padding: 10px;
+    }
+    ul li:hover {
+        background: transparent !important;
+        color: #000;
+    }
+
+
+    .contenedor-sub {
+        padding: 0px;
+
+        padding-right: 0px !important;
+        padding-left: 0px !important;
+    }
+
+    .nav-tabs>li {
+        float: left;
+        margin-bottom: -1px;
+        background-color: #E3147E;
+        color: #FFF;
+        width: 100%;
+        position: relative;
+        z-index: -1;
+        height: 35px;
+    }
+
+
+    .nav-tabs>li a {
+        float: left;
+        margin-bottom: -1px;
+        background-color: #AF1865;
+        color: #FFF;
+        width: 100%;
+        border-left-style: solid;
+        border-left-color: #fff;
+        height: 35px;
+        padding: 13px;
+        font-size: 15px;
+        margin: auto;
+        padding-left: 10%;
+        line-height: 0.7 !important;
+    }
+
+    .nav-tabs>li.active>a, .nav-tabs>li.active>a:hover, .nav-tabs>li.active>a:focus {
+        color: #FFF;
+        background-color: #E3147E;
+        border: 1px solid #ddd;
+        border-bottom-color: transparent;
+        cursor: default;
+        padding: 13px;
+        font-size: 15px;
+        margin: auto;
+        padding-left: 10%;
+        line-height: 0.7 !important;
+    }
+    li.active a {
+        background: none !important;
+        background-color: none !important; 
+    }
+    .service-item .service-icon {
+        font-size: 1em !important;
+        padding: 0px !important;
+        background-color: #DCDA2F;
+        width: 100%;
+        line-height: 43px;
+        height: 40px;
+        transition: all linear 0.5s;
+    }
+
+    .service-item {
+        position: relative;
+        color: white;
+        text-align: center;
+        margin-bottom: 0px !important; 
+    }
+    .service-item .service-content {
+        display: none !important;
+    }
+
+
+}
+
+.fondo_verde{
+    background-color: #dcda2f !important;
+}
+.fondo_amarillo{
+    background-color: #fbc22d !important;
+}
+.fondo_rojo{
+    background-color: #e33126 !important;
+}
+.fondo_magenta{
+    background-color: #e3147e !important;
+}
+.fondo_turqueza{
+    background-color: #21a098 !important;
+}
+.fondo_violeta{
+    background-color: #652981 !important;
+}
+.servicio_1{
+  background-image: url('{{ ('assets/images/servicios/socios/1.png')|theme }}');
+}
+.servicio_2{
+  background-image: url('{{ ('assets/images/servicios/socios/2.png')|theme }}');
+}
+.servicio_3{
+  background-image: url('{{ ('assets/images/servicios/socios/3.png')|theme }}');
+}
+.servicio_4{
+  background-image: url('{{ ('assets/images/servicios/socios/4.png')|theme }}');
+}
+.servicio_5{
+  background-image: url('{{ ('assets/images/servicios/socios/5.png')|theme }}');
+}
+.servicio_6{
+  background-image: url('{{ ('assets/images/servicios/socios/6.png')|theme }}');
+}
+.servicio_7{
+  background-image: url('{{ ('assets/images/servicios/socios/7.png')|theme }}');
+}
+.servicio_8{
+  background-image: url('{{ ('assets/images/servicios/socios/8.png')|theme }}');
+}
+.servicio_tercero_1{
+  background-image: url('{{ ('assets/images/servicios/terceros/1.png')|theme }}');
+}
+.servicio_tercero_2{
+  background-image: url('{{ ('assets/images/servicios/terceros/2.png')|theme }}');
+}
+.servicio_tercero_3{
+  background-image: url('{{ ('assets/images/servicios/terceros/3.png')|theme }}');
+}
+.servicio_tercero_4{
+  background-image: url('{{ ('assets/images/servicios/terceros/4.png')|theme }}');
+}
+.servicio_tercero_5{
+  background-image: url('{{ ('assets/images/servicios/terceros/5.png')|theme }}');
+}
+.servicio_tercero_6{
+  background-image: url('{{ ('assets/images/servicios/terceros/6.png')|theme }}');
+}
+.servicio_tercero_7{
+  background-image: url('{{ ('assets/images/servicios/terceros/7.png')|theme }}');
+}
+.servicio_tercero_8{
+  background-image: url('{{ ('assets/images/servicios/terceros/8.png')|theme }}');
+}
+.servicio_tercero_9{
+  background-image: url('{{ ('assets/images/servicios/terceros/9.png')|theme }}');
+}
+.servicio_tercero_10{
+  background-image: url('{{ ('assets/images/servicios/terceros/10.png')|theme }}');
+}
+.servicio_tercero_11{
+  background-image: url('{{ ('assets/images/servicios/terceros/11.png')|theme }}');
+}
+.servicio_tercero_12{
+  background-image: url('{{ ('assets/images/servicios/terceros/12.png')|theme }}');
+}
+.servicio_tercero_13{
+  background-image: url('{{ ('assets/images/servicios/terceros/13.png')|theme }}');
+}
+</style>
+</head>
+<body> 
+
+    <div class="contenido">
+        <div class="menu-interno">
+            {% partial 'menu' %}
+        </div>
+        <div class="bannertop">  <img class="top-fixed-lider" src="{{ ('assets/images/banners/servicios_ofrecidos.png')|theme }}" style="display: block; margin: auto; width: 100%; max-width: 1280px; height=100%; " alt="bannertop"></div>
+        <div class="blanco"> 
+
+            <!--CONTENIDO--> 
+
+            <div class="contenedor-sub">
+              <ul class="nav nav-tabs">
+                <li class="active"><a href="#socios">SOCIOS</a></li>
+                <li><a href="#terceros">TERCEROS</a></li>
+            </ul>
+
+            <div class="tab-content">
+                <div id="socios" class="tab-pane fade in active">
+                    <!--SUBMENU SOCIOS-->
+                    <div class="sub-menu-app">
+                        <nav role="navigation">
+                            <ul>
+                                <li class="menu-quienes">
+                                    <a href="#salud">
+                                        <div class="service-item fondo_amarillo" id="service-1">
+                                            <div class="service-icon fondo_amarillo">
+                                                SALUD
+                                            </div> <!-- /.service-icon -->
+                                            <div class="service-content fondo_amarillo">
+                                                <div class="inner-service fondo_amarillo">
+                                                    <center> 
+                                                        <img src="{{ ('assets/images/servicios/salud.png')|theme }}">
+                                                    </center>
+                                                </div>
+                                            </div> <!-- /.service-content -->
+                                        </div> <!-- /#service-1 -->
+                                    </a>
+                                </li>
+                                <li class="menu-noticias">
+                                    <a href="#capacitacion">
+                                        <div class="service-item fondo_turqueza" id="service-1">
+                                            <div class="service-icon fondo_turqueza">
+                                                CAPACITACIÓN
+                                            </div> <!-- /.service-icon -->
+                                            <div class="service-content fondo_turqueza">
+                                                <div class="inner-service fondo_turqueza">
+                                                    <center> 
+                                                        <img src="{{ ('assets/images/servicios/capacitacion.png')|theme }}">
+                                                    </center>
+                                                </div>
+                                            </div> <!-- /.service-content -->
+                                        </div> <!-- /#service-1 -->
+                                    </a>
+                                </li>
+                                <li class="menu-legislacion-1">
+                                    <a href="#hospedaje">
+                                        <div class="service-item fondo_verde" id="service-1">
+                                            <div class="service-icon fondo_verde">
+                                                HOSPEDAJE
+                                            </div> <!-- /.service-icon -->
+                                            <div class="service-content fondo_verde">
+                                                <div class="inner-service fondo_verde">
+                                                    <center> 
+                                                        <img src="{{ ('assets/images/servicios/hospedaje.png')|theme }}">
+                                                    </center>
+                                                </div>
+                                            </div> <!-- /.service-content -->
+                                        </div> <!-- /#service-1 -->
+                                    </a>
+                                </li>
+                                <li class="menu-noticias">
+                                    <a href="#fotografia">
+                                        <div class="service-item fondo_violeta" id="service-1">
+                                            <div class="service-icon fondo_violeta">
+                                                FOTOGRAFÍA
+                                            </div> <!-- /.service-icon -->
+                                            <div class="service-content fondo_violeta">
+                                                <div class="inner-service fondo_violeta">
+                                                    <center> 
+                                                        <img src="{{ ('assets/images/servicios/fotografia.png')|theme }}">
+                                                    </center>
+                                                </div>
+                                            </div> <!-- /.service-content -->
+                                        </div> <!-- /#service-1 -->
+                                    </a>
+                                </li>
+                                <li class="menu-noticias2">
+                                    <a href="#free-press">
+                                        <div class="service-item fondo_rojo" id="service-1">
+                                            <div class="service-icon fondo_rojo">
+                                                FREE-PRESS
+                                            </div> <!-- /.service-icon -->
+                                            <div class="service-content fondo_rojo">
+                                                <div class="inner-service fondo_rojo">
+                                                    <center> 
+                                                        <img src="{{ ('assets/images/servicios/salud.png')|theme }}">
+                                                    </center>
+                                                </div>
+                                            </div> <!-- /.service-content -->
+                                        </div> <!-- /#service-1 -->
+                                    </a>
+                                </li>
+            <!--li class="menu-legislacion-1">
+                <a href="#">
+                    <div class="service-item fondo_magenta" id="service-1">
+                        <div class="service-icon fondo_magenta">
+                            ENTRETENIMIENTO
+                        </div> 
+                        <div class="service-content fondo_magenta">
+                            <div class="inner-service fondo_magenta">
+                                <center> 
+                                    <img src="{{ ('assets/images/servicios/entretenimiento.png')|theme }}">
+                                </center>
+                            </div>
+                        </div> 
+                    </div>
+                </a>
+            </li-->
+        </ul>
+    </nav>
+</div>
+
+<div id="salud" class="contenedor-sub-socio">
+    <div class="contenedor-row-1">
+        <div class="circle-submenu1" >
+            <button type="button" class="btn btn-default btn-circle btn-xl servicio_1">
+            </button> 
+        </div>
+        <div class="text-sublink">
+            Acceso a servicios de atención terapéutica desde la psicología y el arte a nivel individual, social, familiar, escolar, ocupacional.
+            <div class="link-vermas"><a data-toggle="modal" data-target="#ver_mas_1">VER MÁS DATOS</a></div>
+        </div>
+    </div>
+</div>
+
+<!-- Modal -->
+<div id="ver_mas_1" style="padding-top:80px;" style="padding-top:80px;" class="modal fade" role="dialog">
+    <div class="modal-dialog">
+        <!-- Modal content-->
+        <div class="modal-content">
+            <div class="modal-header">
+                <button type="button" class="close" data-dismiss="modal">&times;</button>
+                <h4 class="modal-title"><p>Mentalizarte</p></h4>
+            </div>
+            <div class="modal-body">
+                <p><strong>Contacto</strong></p>
+                <p>Dra. Carolina Molina. Psicóloga Clínica</p>
+                <p>Tel. 6018701 Cel. 3123761482</p>
+                <p>Dirección: Calle 96 Nº 12-65 Consultorio 609</p>
+            </div>
+            <div class="modal-footer">
+                <button type="button" class="btn btn-default" data-dismiss="modal">Cerrar</button>
+            </div>
+        </div>
+    </div>
+</div>
+
+<div id="capacitacion" class="contenedor-sub-socio">
+    <div class="contenedor-row-1">
+        <div class="circle-submenu1" >
+            <button type="button" class="btn btn-default btn-circle btn-xl servicio_2">
+            </button> 
+        </div>
+        <div class="text-sublink">
+            Formación y proyección de actores profesionales para cine, tv y teatro, los mejores maestros en busca de tu talento para el medio
+            <div class="link-vermas"><a data-toggle="modal" data-target="#ver_mas_2">VER MÁS DATOS</a></div>
+        </div>
+    </div>
+    <div class="contenedor-row-1">
+        <div class="circle-submenu1" >
+            <button type="button" class="btn btn-default btn-circle btn-xl servicio_3">
+            </button> 
+        </div>
+        <div class="text-sublink">
+            Capacitación en marketing personal para artistas. Coaching para elegir las herramientas para proyectarse en el mundo. Descuentos del 50% para socios de Actores S.C.G.
+            <div class="link-vermas"><a data-toggle="modal" data-target="#ver_mas_3">VER MÁS DATOS</a></div>
+        </div>
+    </div>
+</div>
+
+<!-- Modal -->
+<div id="ver_mas_2" style="padding-top:80px;" class="modal fade" role="dialog">
+    <div class="modal-dialog">
+        <!-- Modal content-->
+        <div class="modal-content">
+            <div class="modal-header">
+                <button type="button" class="close" data-dismiss="modal">&times;</button>
+                <h4 class="modal-title"><p>Proyecto K</p></h4>
+            </div>
+            <div class="modal-body">
+                <p><strong>Contacto</strong></p>
+                <p>María Emilia Kamper. <a href="http://www.tuproyectok.com">www.tuproyectok.com</a></p>
+                <p>Tel. (57-1) 483 24 07  Cel. 318 341 11 57</p>
+                <p>Transversal 25 # 53-D-25 Barrio el Campín</p>
+            </div>
+            <div class="modal-footer">
+                <button type="button" class="btn btn-default" data-dismiss="modal">Cerrar</button>
+            </div>
+        </div>
+    </div>
+</div>
+<div id="ver_mas_3" style="padding-top:80px;" class="modal fade" role="dialog">
+    <div class="modal-dialog">
+        <!-- Modal content-->
+        <div class="modal-content">
+            <div class="modal-header">
+                <button type="button" class="close" data-dismiss="modal">&times;</button>
+                <h4 class="modal-title"><p>Tatiana Buriticá</p></h4>
+            </div>
+            <div class="modal-body">
+                <p><strong>Contacto</strong></p>
+                <p>Tatiana Buriticá</p>
+                <p>Tel. 318 711 6879</p>
+                <p>buritica.marketing@gmail.com</p>
+                <p><a href="http://buriticamarketing.wordpress.com">buriticamarketing.wordpress.com</a></p>
+                <p><a href="http://www.actores.org.co/wp-content/uploads/COACHING-EN-MARKETING-VALORES.pdf">Tarifas</a></p>
+            </div>
+            <div class="modal-footer">
+                <button type="button" class="btn btn-default" data-dismiss="modal">Cerrar</button>
+            </div>
+        </div>
+    </div>
+</div>
+
+<div id="hospedaje" class="contenedor-sub-socio">
+    <div class="contenedor-row-1">
+        <div class="circle-submenu1" >
+            <button type="button" class="btn btn-default btn-circle btn-xl servicio_4">
+            </button> 
+        </div>
+        <div class="text-sublink">
+            Hospedaje campestre en Villa De Leyva-Boyaca. El <a href="http://www.actores.org.co/wp-content/uploads/presentacion-de-servicios-y-fotos-Hotel-Campestre-San-Sebastian.pdf"> Hotel Campestre San Sebastián</a> está rodeado de naturaleza y es el lugar ideal para la relajación y el descanso. Descuentos para los socios de Actores S.C.G. en todas las temporadas.
+            <div class="link-vermas"><a data-toggle="modal" data-target="#ver_mas_4">VER MÁS DATOS</a></div>
+        </div>
+    </div>
+</div>
+
+<!-- Modal -->
+<div id="ver_mas_4" style="padding-top:80px;" class="modal fade" role="dialog">
+    <div class="modal-dialog">
+        <!-- Modal content-->
+        <div class="modal-content">
+            <div class="modal-header">
+                <button type="button" class="close" data-dismiss="modal">&times;</button>
+                <h4 class="modal-title"><p>Hotel Campestre San Sebastian</p></h4>
+            </div>
+            <div class="modal-body">
+                <p><strong>Contacto</strong></p>
+                <p>Sebastian Awazacko</p>
+                <p>reservas@hotelcampestresansebastian.co</p>
+                <p><a href="http://www.actores.org.co/wp-content/uploads/tarifas-Hotel-Campestre-San-Sebastian.pdf">Tarifas</a></p>
+            </div>
+            <div class="modal-footer">
+                <button type="button" class="btn btn-default" data-dismiss="modal">Cerrar</button>
+            </div>
+        </div>
+    </div>
+</div>
+
+<div id="fotografia" class="contenedor-sub-socio">
+    <div class="contenedor-row-1">
+        <div class="circle-submenu1" >
+            <button type="button" class="btn btn-default btn-circle btn-xl servicio_5">
+            </button> 
+        </div>
+        <div class="text-sublink">
+            La mejor opción en fotografía para actores, logra una primera impresión sólida y profesional, gracias a una sesión cuidadosamente preparada para actores con un concepto estético actual y personalizado. Descuentos para socios de Actores S.C.G. 
+            <div class="link-vermas"><a data-toggle="modal" data-target="#ver_mas_5">VER MÁS DATOS</a></div>
+        </div>
+    </div>
+    <div class="contenedor-row-1">
+        <div class="circle-submenu1" >
+            <button type="button" class="btn btn-default btn-circle btn-xl servicio_6">
+            </button> 
+        </div>
+        <div class="text-sublink">
+            Estudios fotográficos profesionales para portafolio. Tarifas preferenciales y descuentos para socios.
+            <div class="link-vermas"><a data-toggle="modal" data-target="#ver_mas_6">VER MÁS DATOS</a></div>
+        </div>
+    </div>
+</div>
+
+<!-- Modal -->
+<div id="ver_mas_5" style="padding-top:80px;" class="modal fade" role="dialog">
+    <div class="modal-dialog">
+        <!-- Modal content-->
+        <div class="modal-content">
+            <div class="modal-header">
+                <button type="button" class="close" data-dismiss="modal">&times;</button>
+                <h4 class="modal-title"><p>Book de Actor</p></h4>
+            </div>
+            <div class="modal-body">
+                <p><strong>Contacto</strong></p>
+                <p>Noé Herrera</p>
+                <p>Cel. 310 785 39 19 Tel. 543 85 97</p>
+                <p>noeherrera@me.com  Web: <a href="http://bookdeactor.com">bookdeactor.com</a></p>
+                <p>Dirección: Cra. 13 #79-32</p>
+            </div>
+            <div class="modal-footer">
+                <button type="button" class="btn btn-default" data-dismiss="modal">Cerrar</button>
+            </div>
+        </div>
+    </div>
+</div>
+
+<!-- Modal -->
+<div id="ver_mas_6" style="padding-top:80px;" class="modal fade" role="dialog">
+    <div class="modal-dialog">
+        <!-- Modal content-->
+        <div class="modal-content">
+            <div class="modal-header">
+                <button type="button" class="close" data-dismiss="modal">&times;</button>
+                <h4 class="modal-title"><p>Negret Estudio</p></h4>
+            </div>
+            <div class="modal-body">
+                <p><strong>Contacto</strong></p>
+                <p>Mario Negret</p>
+                <p>Tel. 62451444 Cel. 3007712207</p>
+            </div>
+            <div class="modal-footer">
+                <button type="button" class="btn btn-default" data-dismiss="modal">Cerrar</button>
+            </div>
+        </div>
+    </div>
+</div>
+
+<div id="free-press" class="contenedor-sub-socio">
+    <div class="contenedor-row-1">
+        <div class="circle-submenu1" >
+            <button type="button" class="btn btn-default btn-circle btn-xl servicio_3">
+            </button> 
+        </div>
+        <div class="text-sublink">
+            Servicios de free-press para artistas. Descuento de más del 50% para socios de Actores S.C.G.
+            <div class="link-vermas"><a data-toggle="modal" data-target="#ver_mas_7">VER MÁS DATOS</a></div>
+        </div>
+    </div>
+</div>
+
+<!-- Modal -->
+<div id="ver_mas_7" style="padding-top:80px;" class="modal fade" role="dialog">
+    <div class="modal-dialog">
+        <!-- Modal content-->
+        <div class="modal-content">
+            <div class="modal-header">
+                <button type="button" class="close" data-dismiss="modal">&times;</button>
+                <h4 class="modal-title"><p>Tatiana Buriticá</p></h4>
+            </div>
+            <div class="modal-body">
+                <p><strong>Contacto</strong></p>
+                <p>Tatiana Buriticá</p>
+                <p>Tel. 318 711 6879</p>
+                <p>buritica.marketing@gmail.com</p>
+                <p><a href="http://buriticamarketing.wordpress.com">buriticamarketing.wordpress.com</a></p>
+                <p><a href="http://www.actores.org.co/wp-content/uploads/COACHING-EN-MARKETING-VALORES.pdf">Tarifas</a></p>
+            </div>
+            <div class="modal-footer">
+                <button type="button" class="btn btn-default" data-dismiss="modal">Cerrar</button>
+            </div>
+        </div>
+    </div>
+</div>
+<!--end modal-->
+
+<!--END SUBMENU SOCIOS -->
+
+</div>
+<div id="terceros" class="tab-pane fade">
+    <!--SUBMENU SOCIOS-->
+    <div class="sub-menu-app">
+        <nav role="navigation">
+            <ul>
+                <li class="menu-quienes">
+                    <a href="#salud_terceros">
+                        <div class="service-item fondo_amarillo" id="service-1">
+                            <div class="service-icon fondo_amarillo">
+                                SALUD
+                            </div> <!-- /.service-icon -->
+                            <div class="service-content fondo_amarillo">
+                                <div class="inner-service fondo_amarillo">
+                                    <center> 
+                                        <img src="{{ ('assets/images/servicios/salud.png')|theme }}">
+                                    </center>
+                                </div>
+                            </div> <!-- /.service-content -->
+                        </div> <!-- /#service-1 -->
+                    </a>
+                </li>
+                <li class="menu-legislacion-1">
+                    <a href="#seguros">
+                        <div class="service-item fondo_verde" id="service-1">
+                            <div class="service-icon fondo_verde">
+                                SEGUROS
+                            </div> <!-- /.service-icon -->
+                            <div class="service-content fondo_verde">
+                                <div class="inner-service fondo_verde">
+                                    <center> 
+                                        <img src="{{ ('assets/images/servicios/seguros.png')|theme }}">
+                                    </center>
+                                </div>
+                            </div> <!-- /.service-content -->
+                        </div> <!-- /#service-1 -->
+                    </a>
+                </li>
+                <li class="menu-noticias">
+                    <a href="#capacitacion_terceros">
+                        <div class="service-item fondo_turqueza" id="service-1">
+                            <div class="service-icon fondo_turqueza">
+                                CAPACITACIÓN
+                            </div> <!-- /.service-icon -->
+                            <div class="service-content fondo_turqueza">
+                                <div class="inner-service fondo_turqueza">
+                                    <center> 
+                                        <img src="{{ ('assets/images/servicios/capacitacion.png')|theme }}">
+                                    </center>
+                                </div>
+                            </div> <!-- /.service-content -->
+                        </div> <!-- /#service-1 -->
+                    </a>
+                </li>
+                <li class="menu-noticias">
+                    <a href="#entretenimiento_terceros">
+                        <div class="service-item fondo_violeta" id="service-1">
+                            <div class="service-icon fondo_violeta">
+                                ENTRETENIMIENTO
+                            </div> <!-- /.service-icon -->
+                            <div class="service-content fondo_violeta">
+                                <div class="inner-service fondo_violeta">
+                                    <center> 
+                                        <img src="{{ ('assets/images/servicios/entretenimiento.png')|theme }}">
+                                    </center>
+                                </div>
+                            </div> <!-- /.service-content -->
+                        </div> <!-- /#service-1 -->
+                    </a>
+                </li>
+            </ul>
+        </nav>
+    </div>
+
+<div id="salud_terceros" class="contenedor-sub-socio">
+    <div class="contenedor-row-1">
+        <div class="circle-submenu1" >
+            <button type="button" class="btn btn-default btn-circle btn-xl servicio_tercero_1">
+            </button> 
+        </div>
+        <div class="text-sublink">
+            Acceso a servicios de odontología prepagada con tarifas preferenciales
+            <div class="link-vermas"><a data-toggle="modal" data-target="#ver_mas_terceros_1">VER MÁS DATOS</a></div>
+        </div>
+    </div>
+    <div class="contenedor-row-1">
+        <div class="circle-submenu1" >
+            <button type="button" class="btn btn-default btn-circle btn-xl servicio_tercero_2">
+            </button> 
+        </div>
+        <div class="text-sublink">
+            Acceso a una tarifa preferencial en elservicio de atención médica domiciliaria y traslado en ambulancia si se requiere, las 24 horas del día.
+            <div class="link-vermas"><a data-toggle="modal" data-target="#ver_mas_terceros_2">VER MÁS DATOS</a></div>
+        </div>
+    </div>
+    <div class="contenedor-row-1">
+        <div class="circle-submenu1" >
+            <button type="button" class="btn btn-default btn-circle btn-xl servicio_tercero_3">
+            </button> 
+        </div>
+        <div class="text-sublink">
+            Acceso a servicios de medicina prepagada con tarifas preferenciales.
+            <div class="link-vermas"><a data-toggle="modal" data-target="#ver_mas_terceros_3">VER MÁS DATOS</a></div>
+        </div>
+    </div>
+    <div class="contenedor-row-1">
+        <div class="circle-submenu1" >
+            <button type="button" class="btn btn-default btn-circle btn-xl servicio_tercero_4">
+            </button> 
+        </div>
+        <div class="text-sublink">
+            Acceso a servicios de fisioterapia a través de la rehabilitación funcional e integral con tarifas preferenciales.
+            <div class="link-vermas"><a data-toggle="modal" data-target="#ver_mas_terceros_4">VER MÁS DATOS</a></div>
+        </div>
+    </div>
+    <div class="contenedor-row-1">
+        <div class="circle-submenu1" >
+            <button type="button" class="btn btn-default btn-circle btn-xl servicio_tercero_5">
+            </button> 
+        </div>
+        <div class="text-sublink">
+            Acceso a servicios de odontología prepagada con tarifas preferenciales
+            <div class="link-vermas"><a data-toggle="modal" data-target="#ver_mas_terceros_5">VER MÁS DATOS</a></div>
+        </div>
+    </div>
+    <div class="contenedor-row-1">
+        <div class="circle-submenu1" >
+            <button type="button" class="btn btn-default btn-circle btn-xl servicio_tercero_6">
+            </button> 
+        </div>
+        <div class="text-sublink">
+            Acceso a planes para garantizar la educación universitaria de sus hijos.
+            <div class="link-vermas"><a data-toggle="modal" data-target="#ver_mas_terceros_6">VER MÁS DATOS</a></div>
+        </div>
+    </div>
+    <div class="contenedor-row-1">
+        <div class="circle-submenu1" >
+            <button type="button" class="btn btn-default btn-circle btn-xl servicio_tercero_7">
+            </button> 
+        </div>
+        <div class="text-sublink">
+            Acceso a servicios de atención terapéutica desde la psicología y el arte a nivel individual, social, familiar, escolar, ocupacional.
+            <div class="link-vermas"><a data-toggle="modal" data-target="#ver_mas_terceros_7">VER MÁS DATOS</a></div>
+        </div>
+    </div>
+    <div class="contenedor-row-1">
+        <div class="circle-submenu1" >
+            <button type="button" class="btn btn-default btn-circle btn-xl servicio_tercero_8">
+            </button> 
+        </div>
+        <div class="text-sublink">
+            Acceso a servicios de entrenamiento deportivo (Bicicletas Real Ryder, Pilates Reformer, Core- Stix- TRX, Yoga Atlético)
+            <div class="link-vermas"><a data-toggle="modal" data-target="#ver_mas_terceros_8">VER MÁS DATOS</a></div>
+        </div>
+    </div>
+    <div class="contenedor-row-1">
+        <div class="circle-submenu1" >
+            <button type="button" class="btn btn-default btn-circle btn-xl servicio_tercero_9">
+            </button> 
+        </div>
+        <div class="text-sublink">
+            Acceso a tarifas preferencias en consulta, examen Pentacam, cirugía láser de miopía, hipermetropía, astigmatismo y presbicia.
+            <div class="link-vermas"><a data-toggle="modal" data-target="#ver_mas_terceros_9">VER MÁS DATOS</a></div>
+        </div>
+    </div>
+    <div class="contenedor-row-1">
+        <div class="circle-submenu1" >
+            <button type="button" class="btn btn-default btn-circle btn-xl servicio_tercero_10">
+            </button> 
+        </div>
+        <div class="text-sublink">
+            Ofrecemos los servicios de rehabilitación cardíaca, prueba de esfuerzo, ecocardiograma, holter EKG y de TENSIÓN ARTERIAL, consulta en cardiología, entre otros. Programas de prevención empresarial. Paquete “conozca su riesgo de infarto”. Llámenos.
+
+Citas: Todos los servicios son con cita previa. Favor llamarnos y solicitar su cita.Horario de atención de lunes a viernes de 8 am a 5 pm. Identificarse con número de cédula y el del carné de Actores SCG.
+            <div class="link-vermas"><a data-toggle="modal" data-target="#ver_mas_terceros_10">VER MÁS DATOS</a></div>
+        </div>
+    </div>
+</div>
+
+<!-- Modal -->
+<div id="ver_mas_terceros_1" style="padding-top:80px;" style="padding-top:80px;" class="modal fade" role="dialog">
+    <div class="modal-dialog">
+        <!-- Modal content-->
+        <div class="modal-content">
+            <div class="modal-header">
+                <button type="button" class="close" data-dismiss="modal">&times;</button>
+                <h4 class="modal-title"><p>Plan Odontológico Colsanitas</p></h4>
+            </div>
+            <div class="modal-body">
+                <p><strong>Contacto</strong></p>
+                <p>SANIMED LTDA</p>
+                <p>César Augusto López Cardona, Gerente Comercial.</p>
+                <p>Tel: (571)610 8933 – (57)314 3302342 / (57)317 441 2719.</p>
+            </div>
+            <div class="modal-footer">
+                <button type="button" class="btn btn-default" data-dismiss="modal">Cerrar</button>
+            </div>
+        </div>
+    </div>
+</div>
+
+<div id="ver_mas_terceros_2" style="padding-top:80px;" style="padding-top:80px;" class="modal fade" role="dialog">
+    <div class="modal-dialog">
+        <!-- Modal content-->
+        <div class="modal-content">
+            <div class="modal-header">
+                <button type="button" class="close" data-dismiss="modal">&times;</button>
+                <h4 class="modal-title"><p>Emermédica</p></h4>
+            </div>
+            <div class="modal-body">
+                <p><strong>Contacto</strong></p>
+                <p>Margarita Barajas. Asesora comercial.</p>
+                <p>Tel: (57)311 8101762 – (57)300 7726795</p>
+            </div>
+            <div class="modal-footer">
+                <button type="button" class="btn btn-default" data-dismiss="modal">Cerrar</button>
+            </div>
+        </div>
+    </div>
+</div>
+<div id="ver_mas_terceros_3" style="padding-top:80px;" style="padding-top:80px;" class="modal fade" role="dialog">
+    <div class="modal-dialog">
+        <!-- Modal content-->
+        <div class="modal-content">
+            <div class="modal-header">
+                <button type="button" class="close" data-dismiss="modal">&times;</button>
+                <h4 class="modal-title"><p>Colpatria</p></h4>
+            </div>
+            <div class="modal-body">
+                <p><strong>Contacto</strong></p>
+                <p>Patricia Pardo Alba.  Asesora Comercial</p>
+                <p>Tel. 6538400 Cel. 3153617987</p>
+                <p>Av. 15 Nº 104-33 Piso 3</p>
+            </div>
+            <div class="modal-footer">
+                <button type="button" class="btn btn-default" data-dismiss="modal">Cerrar</button>
+            </div>
+        </div>
+    </div>
+</div>
+<div id="ver_mas_terceros_4" style="padding-top:80px;" style="padding-top:80px;" class="modal fade" role="dialog">
+    <div class="modal-dialog">
+        <!-- Modal content-->
+        <div class="modal-content">
+            <div class="modal-header">
+                <button type="button" class="close" data-dismiss="modal">&times;</button>
+                <h4 class="modal-title"><p>Adriana Navarrete</p></h4>
+            </div>
+            <div class="modal-body">
+                <p><strong>Contacto</strong></p>
+                <p>Adriana Marcela Navarrete Martínez. Directora.</p>
+                <p>(+57 1) 520 7561  310 220 6267</p>
+                <p>Av. 15 Nº 124-17 Consultorio 501</p>
+                <p><a href="http://www.adriananavarretefisioterapia.com">www.adriananavarretefisioterapia.com</a></p>
+                <p><a href="http://www.actores.org.co/wp-content/uploads/adriana-navarrete.pdf">Tarifas</a></p>
+            </div>
+            <div class="modal-footer">
+                <button type="button" class="btn btn-default" data-dismiss="modal">Cerrar</button>
+            </div>
+        </div>
+    </div>
+</div>
+<div id="ver_mas_terceros_5" style="padding-top:80px;" style="padding-top:80px;" class="modal fade" role="dialog">
+    <div class="modal-dialog">
+        <!-- Modal content-->
+        <div class="modal-content">
+            <div class="modal-header">
+                <button type="button" class="close" data-dismiss="modal">&times;</button>
+                <h4 class="modal-title"><p>Glow Dental Center</p></h4>
+            </div>
+            <div class="modal-body">
+                <p><strong>Contacto</strong></p>
+                <p>Dra. Sandra Yazmín Garzón Triviño</p>
+                <p>Tel. 311 5389208 - 3204884096</p>
+                <p>AV 19 # 118 – 30</p>
+                <p><a href="http://www.glowdentalcenter.com">www.glowdentalcenter.com</a></p>
+                <p><a href="http://www.actores.org.co/wp-content/uploads/PORTAFOLIO-DE-SERVICIOS-GLOW1.pdf">Portafolio de Servicios</a></p>
+            </div>
+            <div class="modal-footer">
+                <button type="button" class="btn btn-default" data-dismiss="modal">Cerrar</button>
+            </div>
+        </div>
+    </div>
+</div>
+<div id="ver_mas_terceros_6" style="padding-top:80px;" style="padding-top:80px;" class="modal fade" role="dialog">
+    <div class="modal-dialog">
+        <!-- Modal content-->
+        <div class="modal-content">
+            <div class="modal-header">
+                <button type="button" class="close" data-dismiss="modal">&times;</button>
+                <h4 class="modal-title"><p>Global Seguros</p></h4>
+            </div>
+            <div class="modal-body">
+                <p><strong>Contacto</strong></p>
+                <p>Celia Sofia Barraza Delgado</p>
+                <p>Móvil : 3105084723 / 3004374376</p>
+                <p><a href="http://www.actores.org.co/wp-content/uploads/Tabla-GUS-46-8-y-10-SMLV-JUNIO-201412.pdf">Planes Global Seguros</a></p>
+            </div>
+            <div class="modal-footer">
+                <button type="button" class="btn btn-default" data-dismiss="modal">Cerrar</button>
+            </div>
+        </div>
+    </div>
+</div>
+<div id="ver_mas_terceros_7" style="padding-top:80px;" style="padding-top:80px;" class="modal fade" role="dialog">
+    <div class="modal-dialog">
+        <!-- Modal content-->
+        <div class="modal-content">
+            <div class="modal-header">
+                <button type="button" class="close" data-dismiss="modal">&times;</button>
+                <h4 class="modal-title"><p>Sweet Lemon</p></h4>
+            </div>
+            <div class="modal-body">
+                <p><strong>Contacto</strong></p>
+                <p>Michelle Manterola y Cristina Umaña</p>
+                <p>Tel. 6225234-2566515</p>
+                <p>Calle 93 B Nº 11 A 84 Piso 5</p>
+            </div>
+            <div class="modal-footer">
+                <button type="button" class="btn btn-default" data-dismiss="modal">Cerrar</button>
+            </div>
+        </div>
+    </div>
+</div>
+<div id="ver_mas_terceros_8" style="padding-top:80px;" style="padding-top:80px;" class="modal fade" role="dialog">
+    <div class="modal-dialog">
+        <!-- Modal content-->
+        <div class="modal-content">
+            <div class="modal-header">
+                <button type="button" class="close" data-dismiss="modal">&times;</button>
+                <h4 class="modal-title"><p>Nova Dentis</p></h4>
+            </div>
+            <div class="modal-body">
+                <p><strong>Contacto</strong></p>
+                <p>Daliana Ruiz</p>
+                <p>Teléfono 703 4495 – 310 819 5906</p>
+                <p>Calle 74 No.15-80 Int.1 Cons.308 Edificio Osaka Trade Center, Bogota D.C</p>
+                <p><a href="http://www.actores.org.co/wp-content/uploads/TARIFAS-ACTORES.pdf">Tarifas para socios de Actores</a></p>
+            </div>
+            <div class="modal-footer">
+                <button type="button" class="btn btn-default" data-dismiss="modal">Cerrar</button>
+            </div>
+        </div>
+    </div>
+</div>
+<div id="ver_mas_terceros_9" style="padding-top:80px;" style="padding-top:80px;" class="modal fade" role="dialog">
+    <div class="modal-dialog">
+        <!-- Modal content-->
+        <div class="modal-content">
+            <div class="modal-header">
+                <button type="button" class="close" data-dismiss="modal">&times;</button>
+                <h4 class="modal-title"><p>Centro Ocular Dr. Rincón</p></h4>
+            </div>
+            <div class="modal-body">
+                <p><strong>Citas</strong></p>
+                <p>Comunicarse al teléfono 6107771</p>
+                <p>Identificarse con número de cédula y el del carné de Actores SCG</p>
+                <p>Calle 93 Nº 19-80</p>
+            </div>
+            <div class="modal-footer">
+                <button type="button" class="btn btn-default" data-dismiss="modal">Cerrar</button>
+            </div>
+        </div>
+    </div>
+</div>
+<div id="ver_mas_terceros_10" style="padding-top:80px;" style="padding-top:80px;" class="modal fade" role="dialog">
+    <div class="modal-dialog">
+        <!-- Modal content-->
+        <div class="modal-content">
+            <div class="modal-header">
+                <button type="button" class="close" data-dismiss="modal">&times;</button>
+                <h4 class="modal-title"><p>Liga Colombiana contral el infarto y la hipertensión</p></h4>
+            </div>
+            <div class="modal-body">
+                <p><strong>Citas</strong></p>
+                <p>Todos los servicios son con cita previa. Favor llamarnos y solicitar su cita.Horario de atención de lunes a viernes de 8 am a 5 pm. Identificarse con número de cédula y el del carné de Actores SCG.</p>
+                <p><strong>Contacto</strong></p>
+                <p>Catalina Moya Escallón</p>
+                <p>Tel. 7048305</p>
+                <p>Dirección: CALLE 82 No 24 66 (cerca estación Trasmilenio El Polo)</p>
+                <p>catalina.moya@colombiacorazon.com</p>
+                <p><a href="http://colombiacorazon.com/">www.colombiacorazon.com</a></p>
+            </div>
+            <div class="modal-footer">
+                <button type="button" class="btn btn-default" data-dismiss="modal">Cerrar</button>
+            </div>
+        </div>
+    </div>
+</div>
+
+<div id="seguros" class="contenedor-sub-socio">
+    <div class="contenedor-row-1">
+        <div class="circle-submenu1" >
+            <button type="button" class="btn btn-default btn-circle btn-xl servicio_tercero_11">
+            </button> 
+        </div>
+        <div class="text-sublink">
+            <a href="http://www.actores.org.co/wp-content/uploads/presentacion-dymamic.pdf">Dynamic Insurance</a> ofrece acceso a tarifas preferenciales para pólizas de seguros de automóviles y motos con descuentos hasta de un 40% para los socios de Actores S.C.G. y sus familiares
+            <div class="link-vermas"><a data-toggle="modal" data-target="#ver_mas_terceros_11">VER MÁS DATOS</a></div>
+        </div>
+    </div>
+</div>
+
+<div id="ver_mas_terceros_11" style="padding-top:80px;" style="padding-top:80px;" class="modal fade" role="dialog">
+    <div class="modal-dialog">
+        <!-- Modal content-->
+        <div class="modal-content">
+            <div class="modal-header">
+                <button type="button" class="close" data-dismiss="modal">&times;</button>
+                <h4 class="modal-title"><p>Dynamic Insurance</p></h4>
+            </div>
+            <div class="modal-body">
+                <p><strong>Contacto</strong></p>
+                <p>Fredy Vega</p>
+                <p>colectivaactores@dynamicinsurance.com</p>
+                <p>(+57 1) 570 1240 – (300) 347 5780  – (300)4115936</p>
+                <p><a href="http://www.actores.org.co/wp-content/uploads/Beneficios-para-ActoresSCG.pdf">Beneficios</a></p>
+            </div>
+            <div class="modal-footer">
+                <button type="button" class="btn btn-default" data-dismiss="modal">Cerrar</button>
+            </div>
+        </div>
+    </div>
+</div>
+
+<div id="capacitacion_terceros" class="contenedor-sub-socio">
+    <div class="contenedor-row-1">
+        <div class="circle-submenu1" >
+            <button type="button" class="btn btn-default btn-circle btn-xl servicio_tercero_12">
+            </button> 
+        </div>
+        <div class="text-sublink">
+            <a href="http://www.actores.org.co/wp-content/uploads/PCI-CERTIFICACI%C3%93N-colombia-2014.png">Certificación en Coaching Multidimensional</a> acreditada por la Federación Internacional de Coaching “ICF”. Descuentos hasta del 15% para socios de Actores S.C.G. Inicia el 20 de junio de 2014 en Bogotá D.C.
+            <div class="link-vermas"><a data-toggle="modal" data-target="#ver_mas_terceros_12">VER MÁS DATOS</a></div>
+        </div>
+    </div>
+</div>
+
+<div id="ver_mas_terceros_12" style="padding-top:80px;" style="padding-top:80px;" class="modal fade" role="dialog">
+    <div class="modal-dialog">
+        <!-- Modal content-->
+        <div class="modal-content">
+            <div class="modal-header">
+                <button type="button" class="close" data-dismiss="modal">&times;</button>
+                <h4 class="modal-title"><p>PCI</p></h4>
+            </div>
+            <div class="modal-body">
+                <p><strong>Contacto</strong></p>
+                <p><a href="http://www.actores.org.co/wp-content/uploads/Coaching_Multidimensional.pdf">Programa de la certificación</a></p>
+                <p>Iván Alberto Cortés J.</p>
+                <p>ivan.cortes@efikaces.org Tel. 314 356 0387</p>
+                <p><a href="http://www.efikaces.org/">www.efikaces.org</a> <a href="http://www.grupoesco.com/">www.grupoesco.com</a></p>
+                <p><a href="http://www.actores.org.co/wp-content/uploads/Plan-de-pagos-PCI-Multidimensional-convenio-Actores.pdf">Tarifas y planes de pago</a></p>
+            </div>
+            <div class="modal-footer">
+                <button type="button" class="btn btn-default" data-dismiss="modal">Cerrar</button>
+            </div>
+        </div>
+    </div>
+</div>
+
+<div id="entretenimiento_terceros" class="contenedor-sub-socio">
+    <div class="contenedor-row-1">
+        <div class="circle-submenu1" >
+            <button type="button" class="btn btn-default btn-circle btn-xl servicio_tercero_13">
+            </button> 
+        </div>
+        <div class="text-sublink">
+            La Comedia Teatro, propone a los actores afiliados a la Sociedad de Gestión un descuento del 45% en la boletería en todas las obras que se presenten en el teatro a partir de agosto del 2014. en Bogotá D.C.
+            <p><a href="http://www.actores.org.co/wp-content/uploads/TARIFAS-SOCIEDAD-DE-GESTION.pdf">TARIFAS PARA SOCIOS</a></p>
+        </div>
+    </div>
+</div>
+
+<div id="ver_mas_terceros_13" style="padding-top:80px;" style="padding-top:80px;" class="modal fade" role="dialog">
+    <div class="modal-dialog">
+        <!-- Modal content-->
+        <div class="modal-content">
+            <div class="modal-header">
+                <button type="button" class="close" data-dismiss="modal">&times;</button>
+                <h4 class="modal-title"><p>La Comedia Teatro</p></h4>
+            </div>
+            <div class="modal-body">
+                <p><a href="http://www.actores.org.co/wp-content/uploads/TARIFAS-SOCIEDAD-DE-GESTION.pdf">TARIFAS PARA SOCIOS</a></p>
+            </div>
+            <div class="modal-footer">
+                <button type="button" class="btn btn-default" data-dismiss="modal">Cerrar</button>
+            </div>
+        </div>
+    </div>
+</div>
+
+</div>
+</div>
+
+<script>
+    $(document).ready(function(){
+        $(".nav-tabs a").click(function(){
+            $(this).tab('show');
+        });
+    });
+</script>
+
+
+</div>
+
+</div>
+{% partial 'footer'   %}
+<!--FIN CONTENIDO-->
+</div>
+</div>
+
+
+<script src="{{ [
+    'assets/js/vendor/jquery-1.11.0.min.js',
+    'assets/js/bootstrap.js',
+    'assets/js/plugins.js',
+    'assets/js/main.js',
+    '@framework',
+    '@framework.extras']|theme }}"></script>
+
+
+
+</body>
+</html>

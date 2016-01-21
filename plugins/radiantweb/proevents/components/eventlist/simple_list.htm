@@ -1,0 +1,46 @@
+{% for event in events|slice(0,2) %}
+	<div class="smallcal">
+		<!--div class="calwrap">
+			<div class="img">
+				<div class="month">
+					{{ event.date|date("M") }}
+				</div>
+				<div class="day">
+					{{ event.date|date("d") }}
+				</div>
+			</div>
+		</div-->
+		<div class="infowrap">
+			<div class="titlehead">
+				<div class="title">
+					<!--a href="{{ eventpage|page({'event_slug': event.title|replace({' ':'-'})|lower,'event_id': event.id }) }}/" rel="pe_tooltip"-->{{ event.title }}<!--/a--> {% if event.status != '' %}<small class="event_{{event.status}}">- {{event.status}}</small>{% endif %}
+				</div>
+			   	<div class="local">
+
+				</div>
+				<div class="time">
+					{% if event.grouped > 0 %}
+						{{ __SELF__.getItemDates(event.grouped_id,event.event_id)|raw }}
+					{% else %}
+						{{ event.date|date(PE_DATE_SPOKEN) }}
+						|
+						{% if event.allday > 0 %}
+							{{'All Day'|_}}
+						{% else %}
+							{{ event.sttime|date(PE_DATE_TIME) }}  - {{ event.entime|date(PE_DATE_TIME) }}
+						{% endif %}
+					{% endif %}
+				</div>
+			</div>
+			<div class="description">
+				
+			</div>
+			<div class="eventfoot">
+				{{ event.excerpt|raw }}
+			</div>
+		</div>
+	</div>
+{% endfor %}
+{% if pagination > 0 %}
+	{{events.render|raw}}
+{% endif %}

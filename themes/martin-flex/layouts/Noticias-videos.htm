@@ -1,0 +1,756 @@
+<!DOCTYPE html>
+<head>
+  <meta charset="utf-8">
+  <title>{{ this.page.title }}</title>
+  <meta name="description" content="">
+  <meta name="viewport" content="width=device-width">
+
+
+  {% partial 'header-interno'   %}
+
+
+  <script type="text/javascript">
+
+    function toggleChevron(e) {
+      $(e.target)
+      .prev('.panel-heading')
+      .find("i.indicator")
+      .toggleClass('glyphicon-chevron-down glyphicon-chevron-up');
+    }
+    $('#accordion').on('hidden.bs.collapse', toggleChevron);
+    $('#accordion').on('shown.bs.collapse', toggleChevron);
+  </script>
+
+  <style type="text/css">
+
+    .panel-default>.panel-heading {
+      color: #333;
+      background-color: #fff !important;
+      border-color: #FFF!important;
+    }
+
+    i.indicator.glyphicon {
+      display: none;
+    }
+
+
+    div#accordion {
+      text-align: center;
+      border-color: #FFF;
+    }
+
+    .panel-default {
+      border-color: #FFF !important;
+    }
+
+    .contenedor-sub{
+      /*  padding:30px;*/
+
+    }
+
+    .title-sub-subrayado {
+      font-size: 40px;
+      text-align: center;
+      border-style: dashed;
+      border-bottom: #000;
+      border-bottom-color: #000;
+      border-bottom-width: medium;
+      border-bottom-style: solid;
+      /* width: 250px; */
+      margin-bottom: 25px;
+    }
+
+    .subtitle-naranja {
+      font-size: 18px;
+      color: #E33126;
+      font-weight: bold;
+    }
+
+    .descargar-documento {
+      background-color: #E33126;
+      color: #FFF;
+      text-align: center;
+      height: 30px;
+      padding: 5px;
+      margin-top: 10px;
+      margin-bottom: 10px;
+    }
+
+    .panel-group .panel-heading+.panel-collapse .panel-body {
+     border-top: 1px solid #FFF !important;
+   }
+
+   .nav-tabs>li {
+    float: left;
+    margin-bottom: -1px;
+    background-color: #21A098;
+    color: #FFF;
+    width: 424px;
+    position: relative;
+    z-index: -1;
+  }
+
+  .nav-tabs>li a{
+    float: left;
+    margin-bottom: -1px;
+    background-color: #21A098;
+    color: #FFF;
+    width: 433px;
+    border-left-style: solid;
+    border-left-color: #fff;
+  }
+  .nav-tabs>li.active>a, .nav-tabs>li.active>a:hover, .nav-tabs>li.active>a:focus {
+    color: #FFF;
+    background-color: #18756F;
+    border: 1px solid #ddd;
+    border-bottom-color: transparent;
+    cursor: default;
+  }
+
+  div#myCarousel {
+    height: 100% !important;
+    
+  }
+
+  .contenedor-slider{
+    width: 300px;
+    height: 300px;
+    background-color: #000;
+  }
+
+  span.glyphicon.glyphicon-chevron-right{
+    display: none;
+  }
+  span.glyphicon.glyphicon-chevron-left{
+   display: none; 
+ }
+
+ .otro {
+  position: relative;
+  z-index: -2;
+}
+
+ul.nav.nav-tabs {
+  position: relative;
+  z-index: 0;
+}
+.title-slider {
+  font-size: 30px;
+  color: #FFF;
+  font-weight: bold;
+}
+
+
+
+
+div#myCarousel {
+  padding: 30px;
+}
+
+.carousel-indicators li {
+
+  border: 1px solid #21A098;
+
+}
+
+ol.carousel-indicators {
+  position: relative;
+}
+
+
+
+
+div#myCarousel {
+  background-color: #FFF;
+  height: 650px;
+}
+
+.col-md-6 {
+  color: #FFF;
+}
+
+.titulo-tipo-socio {
+  font-size: 40px;
+  color: #FFF;
+  font-weight: bold;
+  text-align: center;
+}
+.sub-titulo-tipo-socio {
+  font-size: 22px;
+  color: #FFF;
+  text-align: left;
+  font-weight: bold;
+}
+
+.titulo-tipo-socio-body {
+  color: #FFF;
+  text-transform: uppercase;
+  font-size: 14px;
+}
+
+.titulo2 {
+  font-size: 20px;
+  color: #FFF;
+  font-weight: bold;
+  margin-top: 3px;
+  margin-left: 75px;
+}
+
+
+.circle-submenu1 {
+  width: 60px;
+  float: left;
+  height: 60px;
+
+}
+
+.circle-submenu1-0 {
+  width: 120px;
+  float: left;
+  height: 102px;
+
+}
+
+
+.btn-circle.btn-xl-0 {
+  width: 102px;
+  height: 102px;
+  padding: 10px 16px;
+  font-size: 24px;
+  line-height: 1.33;
+  border-radius: 50%;
+  background-image: url('/themes/martin-flex/assets/images/socios6.png');
+}
+
+
+
+
+.btn-circle.btn-xl-1 {
+  width: 102px;
+  height: 102px;
+  padding: 10px 16px;
+  font-size: 24px;
+  line-height: 1.33;
+  border-radius: 50%;
+  background-image: url('/themes/martin-flex/assets/images/socios5.png');
+}
+
+.btn-circle.btn-xl-2 {
+  width: 102px;
+  height: 102px;
+  padding: 10px 16px;
+  font-size: 24px;
+  line-height: 1.33;
+  border-radius: 50%;
+  background-image: url('/themes/martin-flex/assets/images/socios7.png');
+}
+
+.btn-circle.btn-xl {
+  width: 60px;
+  height: 60px;
+  padding: 10px 16px;
+  font-size: 24px;
+  line-height: 1.33;
+  border-radius: 50%;
+  
+}
+
+.video_1{
+  background-image: url('{{ ('assets/images/video/1_nuestra_sociedad.png')|theme }}');
+}
+
+.video_2{
+  background-image: url('{{ ('assets/images/video/2_proceso_distribucion.png')|theme }}');
+}
+
+.video_3{
+  background-image: url('{{ ('assets/images/video/3_nuestro_bienestar.png')|theme }}');
+}
+
+.video_4{
+  background-image: url('{{ ('assets/images/video/4_hazte_socio.png')|theme }}');
+}
+
+.video_5{
+  background-image: url('{{ ('assets/images/video/5_estrategia_camaleon.png')|theme }}');
+}
+
+.video_6{
+  background-image: url('{{ ('assets/images/video/6_situacion_laboral.png')|theme }}');
+}
+
+.video_7{
+  background-image: url('{{ ('assets/images/video/7_comunicado.png')|theme }}');
+}
+
+.video_8{
+  background-image: url('{{ ('assets/images/video/8_momento_actuar.png')|theme }}');
+}
+
+.video_9{
+  background-image: url('{{ ('assets/images/video/9_nace_actores.png')|theme }}');
+}
+
+.video_10{
+  background-image: url('{{ ('assets/images/video/10_mitos_realidades.png')|theme }}');
+}
+
+.video_11{
+  background-image: url('{{ ('assets/images/video/11_felices.png')|theme }}');
+}
+
+.video_12{
+  background-image: url('{{ ('assets/images/video/12_actores.png')|theme }}');
+}
+
+.video_13{
+  background-image: url('{{ ('assets/images/video/13_casa_famosos.png')|theme }}');
+}
+
+.video_14{
+  background-image: url('{{ ('assets/images/video/14_taller.png')|theme }}');
+}
+
+.video_15{
+  background-image: url('{{ ('assets/images/video/15_homenaje.png')|theme }}');
+}
+
+.sub-titulo2 {
+  margin-left: 75px;
+}
+
+.margintop{
+  margin-top: 20px;
+}
+
+.sub-titulo2 {
+  margin-left: 75px;
+  color: #FFF;
+}
+
+
+.contenedor-sub-item-row {
+  position: relative;
+  height: 120px;
+}
+
+.cont {
+  width: 1280px;
+  overflow: hidden;
+}
+
+.carousel-indicators li {
+  border: 3px solid #FFF;
+  width: 20px;
+  height: 20px;
+}
+
+.carousel-indicators .active {
+  margin: 0;
+  width: 20px;
+  height: 20px;
+  background-color: #FFF;
+}
+
+
+
+.btn-circle.btn-xl {
+  width: 200px;
+  height: 200px;
+  padding: 10px 16px;
+  font-size: 24px;
+  line-height: 1.33;
+  border-radius: 50%;
+}
+
+
+.contenedor-sub-socio {
+  padding: 60px;
+}
+.contenedor-row-1 {
+  margin-bottom: 20px;
+  height: 200px;
+}
+
+.circle-submenu1 {
+  width: 230px;
+  float: left;
+  height: 200px;
+}
+.text-sublink {
+  color: #000;
+  text-align: justify;
+}
+
+
+.carousel-indicators li {
+  border: 3px solid #999;
+  width: 20px;
+  height: 20px;
+}
+
+.carousel-indicators .active {
+  margin: 0;
+  width: 20px;
+  height: 20px;
+  background-color: #CCC;
+}
+
+
+/***** MODAL PROPERTIES *****/
+.modal-content {
+  -webkit-box-shadow: none;
+  box-shadow: none;
+  background:transparent;
+  border:none;
+  outline:none;
+}
+.modal-content iframe {
+  border:none;
+  padding:0;
+  margin:0;
+}
+.close {
+  font-size: 80px;
+  margin:-20px 0 0 0;
+}
+/***** MEDIA QUERIES *****/
+@media only screen and (max-width: 641px) {
+  /***** MODAL PROPERTIES *****/
+  .modal-body {
+    height:100px;
+    padding:0;
+    margin: 0;
+  }
+  .modal-content {
+    padding:0;
+    margin: 0;
+  }
+  .modal-dialog {
+    position: relative;
+    width: auto;
+    margin: 15px;
+  }
+  .close {
+    margin:-12px 0 0 0;
+  }
+}
+@media only screen and (min-width: 768px) {
+  /***** MODAL PROPERTIES *****/
+  .close {
+    font-size: 80px;
+    margin:30px -43px -20px 100px;
+  }
+}
+
+
+@media (max-width: 768px) { 
+  .contenedor-sub {
+    padding: 0px;
+
+    padding-right: 0px !important;
+    padding-left: 0px !important;
+  }
+
+
+  .btn-circle.btn-xl {
+    width: 60px;
+    height: 60px;
+    padding: 10px 16px;
+    font-size: 24px;
+    line-height: 1.33;
+    border-radius: 50%;
+  }
+  .circle-submenu1 {
+    width: 70px;
+    float: left;
+    height: 70px;
+  }
+
+  .contenedor-row-1 {
+    margin-bottom: 20px;
+    height: 90px;
+  }
+
+
+
+
+}
+
+
+.contenedor-sub {
+  padding: 0px;
+  padding-right: 0px !important;
+  padding-left: 0px !important;
+}
+
+</style>
+
+</head>
+<body>
+<div class="contenido">
+  <div class="menu-interno"> 
+     {% partial 'menu' %}
+  </div>   
+
+ <div class="sin_banner"> 
+
+  <!--CONTENIDO--> 
+
+  <div class="contenedor-sub">
+    <div id="myCarousel" class="carousel slide" data-ride="carousel">
+      <!-- Indicators -->
+      <ol class="carousel-indicators">
+        <li data-target="#myCarousel" data-slide-to="0" class="active"></li>
+        <li data-target="#myCarousel" data-slide-to="1"></li>
+        <li data-target="#myCarousel" data-slide-to="2"></li>
+        <li data-target="#myCarousel" data-slide-to="3"></li>
+      </ol>
+      <!-- Wrapper for slides -->
+      <div class="carousel-inner" role="listbox">
+        <div class="item active">
+          <div class="row">
+            <div class="col-md-6">
+              <div class="contenedor-row-1">
+               <div class="circle-submenu1" ><button type="button" class="btn btn-default btn-circle btn-xl video_1"><i class="glyphicon glyphicon-router"></i></button> </div>
+               <div class="text-sublink">
+                 <h1>Conozca Nuestra Sociedad</h1>
+                 Conozca nuestra sociedad en un minuto. Actores, S.C.G. es la sociedad que gestiona en Colombia el derecho de remuneración por comunicación pública de los actores.
+                 <div class="link-vermas"><a href="#" class="btn btn-default" data-toggle="modal" data-target="#videoModal" data-theVideo="https://www.youtube.com/embed/2SOJzi37pDY">VER VIDEO</a></div>
+               </div>
+             </div>
+             <div class="contenedor-row-1">
+               <div class="circle-submenu1" ><button type="button" class="btn btn-default btn-circle btn-xl video_2"><i class="glyphicon glyphicon-router"></i></button> </div>
+               <div class="text-sublink">
+                 <h1>El proceso de distribución</h1>
+                 Así recaudamos y distribuimos el dinero al que tienen derecho los artistas intérpretes audiovisuales por la comunicación pública de las obras en las que participan.
+                 <div class="link-vermas"><a href="#" class="btn btn-default" data-toggle="modal" data-target="#videoModal" data-theVideo="http://www.youtube.com/embed/MYdaALQ-K2g">VER VIDEO</a></div>
+               </div>
+             </div>
+           </div>
+
+           <div class="col-md-6">
+            <div class="contenedor-row-1">
+             <div class="circle-submenu1" ><button type="button" class="btn btn-default btn-circle btn-xl video_3"><i class="glyphicon glyphicon-router"></i></button> </div>
+             <div class="text-sublink">
+               <h1>Nuestro bienestar</h1>
+               Trabajamos para el bienestar de nuestros socios y sus familias en 4 líneas de acción.
+               <div class="link-vermas"><a href="#" class="btn btn-default" data-toggle="modal" data-target="#videoModal" data-theVideo="http://www.youtube.com/embed/AFjIF-Vuxlw">VER VIDEO</a></div>
+             </div>
+           </div>
+           <div class="contenedor-row-1">
+             <div class="circle-submenu1" ><button type="button" class="btn btn-default btn-circle btn-xl video_4"><i class="glyphicon glyphicon-router"></i></button> </div>
+             <div class="text-sublink">
+               <h1>Hazte socio</h1>
+               Aquí te explicamos cómo afiliarte. Es fácil y no tiene costo.
+               <div class="link-vermas"><a href="#" class="btn btn-default" data-toggle="modal" data-target="#videoModal" data-theVideo="http://www.youtube.com/embed/GXoRfV3gjl0">VER VIDEO</a></div>
+             </div>
+           </div>
+         </div>
+       </div>
+     </div>
+        <div class="item">
+          <div class="row">
+            <div class="col-md-6">
+              <div class="contenedor-row-1">
+               <div class="circle-submenu1" ><button type="button" class="btn btn-default btn-circle btn-xl video_5"><i class="glyphicon glyphicon-router"></i></button> </div>
+               <div class="text-sublink">
+                 <h1>Estrategia Camaleón</h1>
+                 Conoce nuestra sociedad, el proceso de distribución del dinero del derecho por comunicación pública, nuestros programas de bienestar social y cómo puedes hacerte socio.
+                 <div class="link-vermas"><a href="#" class="btn btn-default" data-toggle="modal" data-target="#videoModal" data-theVideo="http://www.youtube.com/embed/x8iHN3wvQls">VER VIDEO</a></div>
+               </div>
+             </div>
+             <div class="contenedor-row-1">
+               <div class="circle-submenu1" ><button type="button" class="btn btn-default btn-circle btn-xl video_6"><i class="glyphicon glyphicon-router"></i></button> </div>
+               <div class="text-sublink">
+                 <h1>Cómo actuan los actores cuando no están actuando</h1>
+                 El programa de Señal Colombia, En Órbita, estuvo indagando qué hacen los actores cuando no están actuando. Negocios, política, pintar, comunicaciones, hay tantas respuestas como hay individuos dedicados a la actuación. Pero la fundación, puesta en marcha y gestión de Actores S.C.G. es el logro de los actores colombianos como colectivo, forjado gracias al trabajo del gremio por fuera de las cámaras y de las tablas.
+                 <div class="link-vermas"><a href="#" class="btn btn-default" data-toggle="modal" data-target="#videoModal" data-theVideo="http://www.youtube.com/embed/mcRoeEN0qCo">VER VIDEO</a></div>
+               </div>
+             </div>
+           </div>
+
+           <div class="col-md-6">
+            <div class="contenedor-row-1">
+             <div class="circle-submenu1" ><button type="button" class="btn btn-default btn-circle btn-xl video_7"><i class="glyphicon glyphicon-router"></i></button> </div>
+             <div class="text-sublink">
+               <h1>Comunicado de Actores S.C.G sobre SAGAI</h1>
+               Les pedimos a nuestros amigos actores argentinos nos ayuden a que los directivos de SAGAI rectifiquen sus criterios de reciprocidad con las demás sociedades de gestión de Iberoamérica.
+               <div class="link-vermas"><a href="#" class="btn btn-default" data-toggle="modal" data-target="#videoModal" data-theVideo="http://www.youtube.com/embed/DENQuOGK7yU">VER VIDEO</a></div>
+             </div>
+           </div>
+           <div class="contenedor-row-1">
+             <div class="circle-submenu1" ><button type="button" class="btn btn-default btn-circle btn-xl video_8"><i class="glyphicon glyphicon-router"></i></button> </div>
+             <div class="text-sublink">
+               <h1>Es el momento de actuar</h1>
+               En un acto sin precedentes, los actores que trabajamos en Colombia manifestamos nuestra decisión de no firmar cláusulas que pretendan hacernos ceder nuestro derecho de remuneración por comunicación pública. ESTAMOS FIRMES, NO FIRMAMOS
+              Fuente: Canal Actores SCG Youtube
+               <div class="link-vermas"><a href="#" class="btn btn-default" data-toggle="modal" data-target="#videoModal" data-theVideo="http://www.youtube.com/embed/eALRGZJUHLM">VER VIDEO</a></div>
+             </div>
+           </div>
+         </div>
+       </div>
+     </div>
+        <div class="item">
+          <div class="row">
+            <div class="col-md-6">
+              <div class="contenedor-row-1">
+               <div class="circle-submenu1" ><button type="button" class="btn btn-default btn-circle btn-xl video_9"><i class="glyphicon glyphicon-router"></i></button> </div>
+               <div class="text-sublink">
+                 <h1>Nace Actores SCG</h1>
+                 Autorización de funcionamiento a la Sociedad de Gestión Colectiva, lo que les permitirá a partir de ahora, cobrar remuneraciones no solo por la interpretación de personajes en televisión o cine, sino por cada vez que los programas en los que participen se emitan o retransmitan dentro o fuera del país.
+                  Fuente: Derecho de Autor Colombia
+                  Canal Youtube
+                 <div class="link-vermas"><a href="#" class="btn btn-default" data-toggle="modal" data-target="#videoModal" data-theVideo="http://www.youtube.com/embed/cXi6WIMtEaE">VER VIDEO</a></div>
+               </div>
+             </div>
+             <div class="contenedor-row-1">
+               <div class="circle-submenu1" ><button type="button" class="btn btn-default btn-circle btn-xl video_10"><i class="glyphicon glyphicon-router"></i></button> </div>
+               <div class="text-sublink">
+                 <h1>Derechos de autor</h1>
+                 Mitos y Realidades Ley de Derechos de Autor
+                  Fuente: Derecho de Autor Colombia
+                  Canal Youtube
+                 <div class="link-vermas"><a href="#" class="btn btn-default" data-toggle="modal" data-target="#videoModal" data-theVideo="http://www.youtube.com/embed/v3hcEH0nwlAhttp://www.youtube.com/embed/B7b3zGg0FT8">VER VIDEO</a></div>
+               </div>
+             </div>
+           </div>
+
+           <div class="col-md-6">
+            <div class="contenedor-row-1">
+             <div class="circle-submenu1" ><button type="button" class="btn btn-default btn-circle btn-xl video_11"><i class="glyphicon glyphicon-router"></i></button> </div>
+             <div class="text-sublink">
+               <h1>Felices</h1>
+               Aprobación Ley Fanny Mikey 
+              Fuente: Derecho de Autor Colombia
+              Canal Youtube
+               <div class="link-vermas"><a href="#" class="btn btn-default" data-toggle="modal" data-target="#videoModal" data-theVideo="http://www.youtube.com/embed/B7b3zGg0FT8">VER VIDEO</a></div>
+             </div>
+           </div>
+           <div class="contenedor-row-1">
+             <div class="circle-submenu1" ><button type="button" class="btn btn-default btn-circle btn-xl video_12"><i class="glyphicon glyphicon-router"></i></button> </div>
+             <div class="text-sublink">
+               <h1>Actores SCG</h1>
+               Actores Sociedad Colombiana de Gestión
+               <div class="link-vermas"><a href="#" class="btn btn-default" data-toggle="modal" data-target="#videoModal" data-theVideo="http://www.youtube.com/embed/kdUV3BOiIvo">VER VIDEO</a></div>
+             </div>
+           </div>
+         </div>
+       </div>
+     </div>
+        <div class="item">
+          <div class="row">
+            <div class="col-md-6">
+              <div class="contenedor-row-1">
+               <div class="circle-submenu1" ><button type="button" class="btn btn-default btn-circle btn-xl video_13"><i class="glyphicon glyphicon-router"></i></button> </div>
+               <div class="text-sublink">
+                 <h1>Casa de famosos en Actores SCG</h1>
+                 El 3 de agosto de 2012, la sección Casa de famosos de City Noticias visitó la sede de Actores Sociedad Colombiana de Gestión.
+                 <div class="link-vermas"><a href="#" class="btn btn-default" data-toggle="modal" data-target="#videoModal" data-theVideo="http://www.youtube.com/embed/Q-Szz6alvNg">VER VIDEO</a></div>
+               </div>
+             </div>
+             <div class="contenedor-row-1">
+               <div class="circle-submenu1" ><button type="button" class="btn btn-default btn-circle btn-xl video_14"><i class="glyphicon glyphicon-router"></i></button> </div>
+               <div class="text-sublink">
+                 <h1>Taller de fundamentos técnicos para el trabajo con la voz y el texto</h1>
+                 En septiembre de 2012, se llevó a cabo este taller bajo la dirección de Bárbara Perea Arce y Sergio Hernández Vásquez.
+                 <div class="link-vermas"><a href="#" class="btn btn-default" data-toggle="modal" data-target="#videoModal" data-theVideo="http://www.youtube.com/embed/YQsu9D35oEw">VER VIDEO</a></div>
+               </div>
+             </div>
+           </div>
+
+           <div class="col-md-6">
+            <div class="contenedor-row-1">
+             <div class="circle-submenu1" ><button type="button" class="btn btn-default btn-circle btn-xl video_15"><i class="glyphicon glyphicon-router"></i></button> </div>
+             <div class="text-sublink">
+               <h1>Homenaje a Vicky Hernández, socia m1l</h1>
+               El 3 de abril de 2013, ACTORES SCG reveló el nombre de su socio No. 1000, Vicky Hernández, y le hizo un homenaje.
+               <div class="link-vermas"><a href="#" class="btn btn-default" data-toggle="modal" data-target="#videoModal" data-theVideo="http://www.youtube.com/embed/Tv0HbkC4b3s">VER VIDEO</a></div>
+             </div>
+           </div>
+         </div>
+       </div>
+     </div>
+   </div>
+
+   <!-- Left and right controls -->
+   <a class="left carousel-control" href="#myCarousel" role="button" data-slide="prev">
+    <span class="glyphicon glyphicon-chevron-left" aria-hidden="true"></span>
+    <span class="sr-only">Previous</span>
+  </a>
+  <a class="right carousel-control" href="#myCarousel" role="button" data-slide="next">
+    <span class="glyphicon glyphicon-chevron-right" aria-hidden="true"></span>
+    <span class="sr-only">Next</span>
+  </a>
+
+
+</div>
+
+
+
+
+<script>
+  $(document).ready(function(){
+    $(".nav-tabs a").click(function(){
+      $(this).tab('show');
+    });
+  });
+</script>
+
+
+</div>
+
+<div class="modal fade" id="videoModal" tabindex="-1" role="dialog" aria-labelledby="videoModal" aria-hidden="true">
+  <div class="modal-dialog">
+    <div class="modal-content">
+      <div class="modal-body">
+        <button type="button" class="close" data-dismiss="modal" aria-hidden="true">&times;</button>
+        <div>
+          <iframe width="100%" height="350" src=""></iframe>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+</div>
+{% partial 'footer'   %}
+<!--FIN CONTENIDO-->
+</div>
+</div>
+
+<script type="text/javascript">
+  autoPlayYouTubeModal();
+
+  //FUNCTION TO GET AND AUTO PLAY YOUTUBE VIDEO FROM DATATAG
+  function autoPlayYouTubeModal() {
+    var trigger = $("body").find('[data-toggle="modal"]');
+    trigger.click(function () {
+      var theModal = $(this).data("target"),
+      videoSRC = $(this).attr("data-theVideo"),
+      videoSRCauto = videoSRC + "?autoplay=1";
+      $(theModal + ' iframe').attr('src', videoSRCauto);
+      $(theModal + ' button.close').click(function () {
+        $(theModal + ' iframe').attr('src', videoSRC);
+      });
+      $('.modal').click(function () {
+        $(theModal + ' iframe').attr('src', videoSRC);
+      });
+    });
+  }
+
+
+
+</script>
+
+<script src="{{ [
+  'assets/js/vendor/jquery-1.11.0.min.js',
+  'assets/js/bootstrap.js',
+  'assets/js/plugins.js',
+  'assets/js/main.js',
+  '@framework',
+  '@framework.extras']|theme }}"></script>
+
+
+
+</body>
+</html>

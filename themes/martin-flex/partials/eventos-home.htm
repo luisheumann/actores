@@ -1,0 +1,23 @@
+[viewBag]
+
+[proEventList]
+style = "simple_list"
+calendar = 1
+num = 2
+pagination = 1
+
+[proEventCalendar]
+style = "smallcal"
+calendar = 1
+==
+<div class="eventos_home">
+
+		<div class="col-md-6 lista_eventos">
+			<p class="proximos_eventos">próximos eventos camaleón</p>
+			{% component 'proEventList' %}
+		</div>
+		<div class="col-md-6 calendario">
+			{% component 'proEventCalendar' %}
+		</div>
+
+</div>

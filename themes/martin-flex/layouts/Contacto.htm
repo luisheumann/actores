@@ -1,0 +1,625 @@
+<!DOCTYPE html>
+<head>
+    <meta charset="utf-8">
+    <title>{{ this.page.title }}</title>
+    <meta name="description" content="">
+    <meta name="viewport" content="width=device-width">
+
+
+    {% partial 'header-interno'   %}
+
+
+    <script type="text/javascript">
+
+        function toggleChevron(e) {
+            $(e.target)
+            .prev('.panel-heading')
+            .find("i.indicator")
+            .toggleClass('glyphicon-chevron-down glyphicon-chevron-up');
+        }
+        $('#accordion').on('hidden.bs.collapse', toggleChevron);
+        $('#accordion').on('shown.bs.collapse', toggleChevron);
+    </script>
+
+    <style type="text/css">
+
+        .panel-default>.panel-heading {
+            color: #333;
+            background-color: #fff !important;
+            border-color: #FFF!important;
+        }
+
+        i.indicator.glyphicon {
+            display: none;
+        }
+
+
+        div#accordion {
+            text-align: center;
+            border-color: #FFF;
+        }
+
+        .panel-default {
+            border-color: #FFF !important;
+        }
+
+        .contenedor-sub{
+          /*  padding:30px;*/
+
+      }
+
+      .title-sub-subrayado {
+        font-size: 40px;
+        text-align: center;
+        border-style: dashed;
+        border-bottom: #000;
+        border-bottom-color: #000;
+        border-bottom-width: medium;
+        border-bottom-style: solid;
+        /* width: 250px; */
+        margin-bottom: 25px;
+    }
+
+    .subtitle-naranja {
+        font-size: 18px;
+        color: #E33126;
+        font-weight: bold;
+    }
+
+    .descargar-documento {
+        background-color: #E33126;
+        color: #FFF;
+        text-align: center;
+        height: 30px;
+        padding: 5px;
+        margin-top: 10px;
+        margin-bottom: 10px;
+    }
+
+    .panel-group .panel-heading+.panel-collapse .panel-body {
+     border-top: 1px solid #FFF !important;
+ }
+
+ .nav-tabs>li {
+    float: left;
+    margin-bottom: -1px;
+    background-color: #21A098;
+    color: #FFF;
+    width: 424px;
+    position: relative;
+    z-index: -1;
+}
+
+.nav-tabs>li a{
+    float: left;
+    margin-bottom: -1px;
+    background-color: #21A098;
+    color: #FFF;
+    width: 433px;
+    border-left-style: solid;
+    border-left-color: #fff;
+}
+.nav-tabs>li.active>a, .nav-tabs>li.active>a:hover, .nav-tabs>li.active>a:focus {
+    color: #FFF;
+    background-color: #18756F;
+    border: 1px solid #ddd;
+    border-bottom-color: transparent;
+    cursor: default;
+}
+
+div#myCarousel {
+    height: 100% !important;
+    
+}
+
+.contenedor-slider{
+    width: 300px;
+    height: 300px;
+    background-color: #000;
+}
+
+span.glyphicon.glyphicon-chevron-right{
+    display: none;
+}
+span.glyphicon.glyphicon-chevron-left{
+   display: none; 
+}
+
+.otro {
+    position: relative;
+    z-index: -2;
+}
+
+ul.nav.nav-tabs {
+    position: relative;
+    z-index: 0;
+}
+.title-slider {
+    font-size: 30px;
+    color: #FFF;
+    font-weight: bold;
+}
+
+
+
+
+div#myCarousel {
+    padding: 30px;
+}
+
+.carousel-indicators li {
+
+    border: 1px solid #21A098;
+
+}
+
+ol.carousel-indicators {
+    position: relative;
+}
+
+
+
+
+div#myCarousel {
+    background-color: #21A098;
+    height: 515px;
+}
+
+.col-md-6 {
+    color: #FFF;
+}
+
+.titulo-tipo-socio {
+    font-size: 40px;
+    color: #FFF;
+    font-weight: bold;
+    text-align: center;
+}
+.sub-titulo-tipo-socio {
+    font-size: 22px;
+    color: #FFF;
+    text-align: left;
+    font-weight: bold;
+}
+
+.titulo-tipo-socio-body {
+    color: #FFF;
+    text-transform: uppercase;
+    font-size: 14px;
+}
+
+.titulo2 {
+    font-size: 20px;
+    color: #FFF;
+    font-weight: bold;
+    margin-top: 3px;
+    margin-left: 75px;
+}
+
+
+.circle-submenu1 {
+    width: 60px;
+    float: left;
+    height: 60px;
+
+}
+
+.circle-submenu1-0 {
+    width: 120px;
+    float: left;
+    height: 102px;
+
+}
+
+
+.btn-circle.btn-xl-0 {
+  width: 102px;
+  height: 102px;
+  padding: 10px 16px;
+  font-size: 24px;
+  line-height: 1.33;
+  border-radius: 50%;
+  background-image: url('/themes/martin-flex/assets/images/socios6.png');
+}
+
+
+
+
+.btn-circle.btn-xl-1 {
+  width: 102px;
+  height: 102px;
+  padding: 10px 16px;
+  font-size: 24px;
+  line-height: 1.33;
+  border-radius: 50%;
+  background-image: url('/themes/martin-flex/assets/images/socios5.png');
+}
+
+.btn-circle.btn-xl-2 {
+  width: 102px;
+  height: 102px;
+  padding: 10px 16px;
+  font-size: 24px;
+  line-height: 1.33;
+  border-radius: 50%;
+  background-image: url('/themes/martin-flex/assets/images/socios7.png');
+}
+
+
+
+
+.btn-circle.btn-xl {
+  width: 60px;
+  height: 60px;
+  padding: 10px 16px;
+  font-size: 24px;
+  line-height: 1.33;
+  border-radius: 50%;
+  background-image: url('/themes/martin-flex/assets/images/socios6.png');
+}
+
+
+
+.sub-titulo2 {
+    margin-left: 75px;
+}
+
+.margintop{
+  margin-top: 20px;
+}
+
+.sub-titulo2 {
+    margin-left: 75px;
+    color: #FFF;
+}
+
+
+.contenedor-sub-item-row {
+    position: relative;
+    height: 120px;
+}
+
+
+.title-slider-right {
+    color: #ccc;
+    font-size: 23px;
+    margin-top: 30px;
+    /* text-transform: uppercase; */
+    /* font-variant: inherit; */
+    text-justify: inherit;
+    text-align: justify;
+    text-justify: inter-word;
+}
+
+.text-ver-listado-socios {
+    BACKGROUND-COLOR: #652981;
+    width: 300px;
+    padding: 22px;
+    margin-top: 20px;
+}
+
+.title-big-socios {
+    text-align: center;
+    font-size: 54px;
+    font-weight: bold;
+}
+
+.sub-title-big-socios {
+    font-size: 30px;
+}
+
+.btn-circle.btn-xl-row3 {
+    width: 300px;
+    height: 300px;
+    padding: 10px 16px;
+    font-size: 24px;
+    line-height: 1.33;
+    border-radius: 50%;
+    /* background-image: url('/themes/martin-flex/assets/images/socios6.png'); */
+}
+
+
+.circle-submenu1-row3 {
+    width: 300px;
+    /* float: left; */
+    height: 300px;
+    text-align: center;
+}
+
+
+.sub-title-big-socios-row3 {
+    font-size: 20px;
+    font-weight: bold;
+}
+
+
+
+.title-big-socios-row3 {
+    font-size: 26px;
+    font-weight: bold;
+    color: #FBC22D;
+}
+
+
+.col-md-4 {
+    margin-top: 28px;
+}
+
+
+.title-big-socios-row3-mas {
+    color: #21A098;
+}
+
+
+
+.panel-default>.panel-heading {
+    color: #333;
+    background-color: #fff !important;
+    border-color: #FFF!important;
+}
+
+i.indicator.glyphicon {
+    display: none;
+}
+
+
+div#accordion {
+    text-align: center;
+    border-color: #FFF;
+}
+
+.panel-default {
+    border-color: #FFF !important;
+}
+
+.contenedor-sub{
+    padding:30px;
+    padding-right: 200px;
+    padding-left: 200px;
+}
+
+.title-sub-subrayado {
+    font-size: 40px;
+    text-align: center;
+    border-style: dashed;
+    border-bottom: #000;
+    border-bottom-color: #000;
+    border-bottom-width: medium;
+    border-bottom-style: solid;
+    /* width: 250px; */
+    margin-bottom: 25px;
+}
+
+.subtitle-naranja {
+    font-size: 18px;
+    color: #E33126;
+    font-weight: bold;
+}
+
+.descargar-documento {
+    background-color: #E33126;
+    color: #FFF;
+    text-align: center;
+    height: 30px;
+    padding: 5px;
+    margin-top: 10px;
+    margin-bottom: 10px;
+}
+
+.panel-group .panel-heading+.panel-collapse .panel-body {
+ border-top: 1px solid #FFF !important;
+}
+
+
+.titulo-acordion-blue {
+    font-size: 26px;
+    color: #21A098;
+    font-weight: bold;
+    text-align: left;
+}
+
+.titulo_contacto {
+    font-size: 50px;
+    color: #652981;
+    font-weight: bold;
+    text-align: center;
+    margin-bottom: 10px;
+}
+
+
+.sub-titulos-preguntas-frecuentes {
+    font-size: 20px;
+    color: #999;
+    text-align: justify;
+}
+
+
+input[type="text"] {
+    width: 500px;
+    color: azure;
+    background-color: #CCC;
+    padding: 20px;
+    margin: 10px;
+}
+
+
+
+
+.contenedor{
+
+  margin-left: auto;
+  margin-right: auto;
+
+}
+
+.contenedor-form {
+    margin-left: 200px;
+}
+
+
+
+button.clase-botonenviar {
+    background-color: #652981;
+    width: 400px;
+    color: #FFF;
+    padding: 20px;
+    margin-left: 50px;
+}
+
+
+
+
+@media (max-width: 768px) { 
+
+    .contenedor {
+        margin-left: 0px !important;
+        margin-right: 0px !important;
+    }
+    .contenedor-sub {
+        padding: 0px;
+
+        padding-right: 0px !important;
+        padding-left: 0px !important;
+    }
+
+    .titulos-preguntas-frecuentes {
+        font-size: 30px !important;
+        color: #000;
+        font-weight: bold;
+        text-align: center;
+        margin-bottom: 28px;
+    }
+
+    .contenedor-form {
+        margin-left: 0px;
+    }
+
+
+
+    input[type="text"] {
+        width: 90% !important;
+        color: azure;
+        background-color: #CCC;
+        padding: 5px;
+        margin: 5px;
+    }
+
+    button.clase-botonenviar {
+        background-color: #652981;
+        width: 90% !important;
+        color: #FFF;
+        padding: 5px !important;
+        margin-left: 0px;
+    }
+
+    .sub-titulos-preguntas-frecuentes {
+        font-size: 16px;
+        color: #999;
+        text-align: justify;
+    }
+}
+
+.contenedor-form {
+    margin-left: 0px!important;
+}
+
+button.clase-botonenviar {
+    background-color: #652981;
+    width: 400px;
+    color: #FFF;
+    padding: 20px;
+    margin-left: 0px !important;
+}
+
+
+</style>
+</head>
+<body>
+<div class="contenido">  
+    <div class="menu-interno"> 
+        {% partial 'menu'   %}
+    </div>   
+    <div class="sin_banner"> 
+        <div class="contenedor-sub">
+            <div class="contenedor">
+                <div class="titulo_contacto">CONTACTO</div>
+                <div class="sub-titulos-preguntas-frecuentes text-justify">
+                    En esta página encontrarás información de utilidad para ponerte en contacto. Puedes hacerlo por el medio que te resulte más cómodo: teléfono, correo electrónico o acercándote personalmente a nuestra sede.
+                </div>
+                <div class="contenedor-form">
+                  <center>
+                   <input type="text" placeholder="Nombre" name="fname">
+                   <input type="text" placeholder="Correo"  name="fname">
+                   <input type="text" placeholder="Teléfono"  name="fname">
+                   <input type="text" placeholder="Mensaje" name="fname"></center>
+                   <center><button class="clase-botonenviar" type="button">ENVIAR </button></center>
+               </div>
+           </div>
+       </div>       
+   </div>
+</div>
+{% partial 'contact' %}
+    <script src="http://maps.google.com/maps/api/js?sensor=true"></script>
+    <script src="{{ ['assets/js/vendor/jquery.gmap3.min.js']|theme }}"></script>
+    <!-- Google Map Init-->
+    <script type="text/javascript">
+        jQuery(function($){
+            $('#map_canvas').gmap3({
+                marker: {
+                    address: '4.6883967,-74.0472464',
+                    options: {
+                      icon: new google.maps.MarkerImage("http://actores.sionica.net/themes/martin-flex/assets/images/pin_map.png")
+                  }
+              },
+              map:{
+                options:{
+                    zoom: 15,
+                    scrollwheel: false,
+                    streetViewControl : true
+                }
+            },
+            overlay:{
+                latLng: [4.6883967,-74.0472464],
+                options:{
+                  content: '<div class="texto_mapa hidden-xs"><span>CONTACTO</span><br>BOGOTÁ - COLOMBIA<br>'+
+                            'Cra 15 N° 103 - 37,<br>'+
+                            'Oficina 103<br><br>'+
+                            'PBX: (+571) 5205192<br>'+
+                            '(+571) 5205193<br>'+
+                            '(+571) 5205192<br>'+
+                            'CEL:3138614710</div>',
+                  offset:{
+                    y:-150,
+                    x:100
+                }
+            }
+        }
+    });
+        });
+</script>
+<script>
+    $(document).ready(function(){
+        $(".nav-tabs a").click(function(){
+            $(this).tab('show');
+        });
+    });
+</script>
+</div>
+</div>
+<!--FIN CONTENIDO-->
+</div>
+</div>
+
+
+<script src="{{ [
+    'assets/js/vendor/jquery-1.11.0.min.js',
+    'assets/js/bootstrap.js',
+    'assets/js/plugins.js',
+    'assets/js/main.js',
+    '@framework',
+    '@framework.extras']|theme }}"></script>
+
+
+
+</body>
+</html>

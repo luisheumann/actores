@@ -1,0 +1,215 @@
+<!DOCTYPE html>
+<head>
+    <meta charset="utf-8">
+    <title>{{ this.page.title }}</title>
+	<meta name="description" content="">
+    <meta name="viewport" content="width=device-width">
+
+
+{% partial 'header-interno'   %}
+
+
+<script type="text/javascript">
+    
+    function toggleChevron(e) {
+    $(e.target)
+        .prev('.panel-heading')
+        .find("i.indicator")
+        .toggleClass('glyphicon-chevron-down glyphicon-chevron-up');
+}
+$('#accordion').on('hidden.bs.collapse', toggleChevron);
+$('#accordion').on('shown.bs.collapse', toggleChevron);
+</script>
+
+<style type="text/css">
+    
+    .panel-default>.panel-heading {
+    color: #333;
+    background-color: #fff !important;
+    border-color: #FFF!important;
+}
+
+i.indicator.glyphicon {
+    display: none;
+}
+
+
+div#accordion {
+    text-align: center;
+    border-color: #FFF;
+}
+
+.panel-default {
+    border-color: #FFF !important;
+}
+
+    .contenedor-sub{
+        padding:30px;
+        padding-right: 200px;
+        padding-left: 200px;
+    }
+
+
+.carousel-indicators li {
+    border: 3px solid #FFF;
+    width: 20px;
+    height: 20px;
+}
+
+.carousel-indicators .active {
+    margin: 0;
+    width: 20px;
+    height: 20px;
+    background-color: #FFF;
+}
+.top-fixed-lider{
+
+  height: 100% !important;
+}
+
+.contenedor-sub {
+    padding: 30px;
+    padding-right: 20% !important;
+    padding-left: 20% !important;
+    text-align: justify;
+}
+</style>
+</head>
+<body>
+
+<div class="contenido">
+  <div class="menu-interno">
+    {% partial 'menu' %}
+  </div>
+     <div class="bannertop">  <img class="top-fixed-lider" src="{{ ('assets/images/banners/quienes_somos.png')|theme }}" style="display: block; margin: auto; width: 100%; max-width: 1280px; height=100%; " alt="bannertop"></div>
+<div class="blanco"> 
+
+<!--CONTENIDO-->
+
+
+<div class="contenedor-sub">
+Somos una sociedad de gestión colectiva que se ocupa de hacer el recaudo y la distribución del derecho de remuneración por comunicación pública que le concedió a los actores la ley 1403 de 2010 o Ley Fanny Mickey.
+Actores Sociedad Colombiana de Gestión nació el 3 de agosto del 1987 con 42 socios, pero sólo hasta la promulgación de la Ley 1403 contó con un marco jurídico que le permitiera ejercer sus actividades. El 28 de septiembre de 2011 con la Resolución No 275 obtuvo su autorización de funcionamiento y en diciembre de ese mismo año, hizo su primer reparto.
+<div class="panel-group titulos_acordeon" id="accordion">
+  <div class="panel panel-default">
+    <div class="panel-heading">
+      <h4 class="panel-title">
+        <a class="accordion-toggle" data-toggle="collapse" data-parent="#accordion" href="#collapse_1">
+          Nuestra Misión
+        </a><i class="indicator glyphicon glyphicon-chevron-down  pull-right"></i>
+      </h4>
+    </div>
+    <div id="collapse_1" class="panel-collapse collapse">
+      <div class="panel-body text-justify">
+        Recaudar y distribuir el dinero que genera el derecho de remuneración por comunicación pública, incluida la puesta a disposición y el alquiler comercial, de las interpretaciones audiovisuales de nuestros socios en Colombia y en el exterior y proporcionarles bienestar y mejoramiento de su calidad de vida.
+      </div>
+    </div>
+  </div>
+  <div class="panel panel-default">
+    <div class="panel-heading">
+      <h4 class="panel-title">
+        <a class="accordion-toggle" data-toggle="collapse" data-parent="#accordion" href="#collapse_2">
+           Nuestra visión
+        </a><i class="indicator glyphicon glyphicon-chevron-up  pull-right"></i>
+      </h4>
+    </div>
+    <div id="collapse_2" class="panel-collapse collapse">
+      <div class="panel-body text-justify">
+        Somos una sociedad de gestión colectiva de actores modelo para Latinoamérica por su eficiencia, transparencia, claridad, rigor técnico, desempeño en el ámbito internacional y sus programas de bienestar social.
+      </div>
+    </div>
+  </div>
+  <div class="panel panel-default">
+    <div class="panel-heading">
+      <h4 class="panel-title">
+        <a class="accordion-toggle" data-toggle="collapse" data-parent="#accordion" href="#collapse_3">
+         ¿qué derechos gestionamos?
+        </a><i class="indicator glyphicon glyphicon-chevron-up pull-right"></i>
+      </h4>
+    </div>
+    <div id="collapse_3" class="panel-collapse collapse">
+      <div class="panel-body text-justify">
+        El derecho de remuneración por comunicación pública de los intérpretes audiovisuales, que se da cada vez que se divulga una interpretación audiovisual. Para su cobro en establecimientos abiertos al público además debe darse “con el fin de entretener al consumidor con ánimo de lucro o de ventas”.  La ley dispone que el actor “conservará en todo caso” este derecho, de manera que el intérprete audiovisual no lo puede ceder a través de contratos u otro tipo de acuerdo con productores o canales.
+      </div>
+    </div>
+  </div>
+  <div class="panel panel-default">
+    <div class="panel-heading">
+      <h4 class="panel-title">
+        <a class="accordion-toggle" data-toggle="collapse" data-parent="#accordion" href="#collapse_4">
+         ¿Quiénes son los intérpretes audiovisuales?
+        </a><i class="indicator glyphicon glyphicon-chevron-up pull-right"></i>
+      </h4>
+    </div>
+    <div id="collapse_4" class="panel-collapse collapse">
+      <div class="panel-body text-justify">
+        Son aquellos artistas que encarnan un personaje a través de su propio cuerpo y voz (o sólo la voz), y lo representan en el marco de una obra audiovisual, a partir de un guion o libreto previo, de la preparación física, emocional e intelectual del rol y de las indicaciones dadas por el director.
+      </div>
+    </div>
+  </div>
+  <div class="panel panel-default">
+    <div class="panel-heading">
+      <h4 class="panel-title">
+        <a class="accordion-toggle" data-toggle="collapse" data-parent="#accordion" href="#collapse_5">
+        ¿Quiénes están obligados al reconocimiento del derecho?
+        </a><i class="indicator glyphicon glyphicon-chevron-up pull-right"></i>
+      </h4>
+    </div>
+    <div id="collapse_5" class="panel-collapse collapse">
+      <div class="panel-body text-justify">
+      Están obligados a reconocer el derecho de remuneración por comunicación pública, por regla general, quienes divulguen la interpretación audiovisual. Para los establecimientos abiertos al público, dicha divulgación debe darse con ánimo de lucro y con el fin de estimular el consumo. Son usuarios del derecho, los canales de televisión, las salas de cine, los operadores de cable, los medios de transporte y los establecimientos abiertos al público (hoteles, líneas aéreas, restaurantes, entre otros).<br>
+      ¿Quién  puede ser socio?
+      Cualquier actor, actriz o doblador que pueda certificar a través de una prueba de video que realiza, por lo menos, una interpretación audiovisual que haya sido emitida.
+      </div>
+    </div>
+  </div>
+  <div class="panel panel-default">
+    <div class="panel-heading">
+      <h4 class="panel-title">
+        <a class="accordion-toggle" data-toggle="collapse" data-parent="#accordion" href="#collapse_6">
+         ¿Cómo puede hacerse socio?
+        </a><i class="indicator glyphicon glyphicon-chevron-up pull-right"></i>
+      </h4>
+    </div>
+    <div id="collapse_6" class="panel-collapse collapse">
+      <div class="panel-body text-justify">
+        Presentando la documentación requerida. En el caso de los mayores de edad: ficha personal, contrato de gestión, fotocopias del documento de identidad y del RUT, hoja de vida con repertorio y prueba de video. Conoce los requisitos de afiliación aquí. Los socios reciben el monto correspondiente por sus derechos de remuneración por comunicación pública y, en el caso de quienes se vinculen como socios de pleno derecho, pueden elegir o ser elegidos para integrar los órganos políticos (asamblea, consejo directivo y comité de vigilancia).
+        Por otra parte, el departamento de Bienestar Social tiene cuatro líneas de acción a través de las cuales busca mejorar la calidad de vida de los socios y sus familiares:
+        • Educación y orientación individual y/o familiar
+        • Beneficios asistenciales, entre los que se encuentran: seguridad social integral, subsidio para no pensionados, subsidio de desempleo, atención médica domiciliaria, auxilio funerario, subsidio de maternidad, subsidio de paternidad, subsidio escolar.
+        • Relaciones institucionales
+        • Formación y actualización
+        El acceso a cada uno de los programas de Bienestar Social depende de su tipo de vinculación y del cumplimiento de los requisitos específicos. Consulta los detalles de Bienestar Social aquí.
+      </div>
+    </div>
+  </div>
+  <div class="panel panel-default">
+    <div class="panel-heading">
+      <h4 class="panel-title">
+        <a class="accordion-toggle" data-toggle="collapse" data-parent="#accordion" href="#collapse_7">
+         ¿En qué se invierten los recursos?
+        </a><i class="indicator glyphicon glyphicon-chevron-up pull-right"></i>
+      </h4>
+    </div>
+    <div id="collapse_7" class="panel-collapse collapse">
+      <div class="panel-body text-justify">
+
+      </div>
+    </div>
+  </div>
+</div>
+
+</div>
+{% partial 'footer'   %}
+<!--FIN CONTENIDO-->
+</div>
+</div>
+    <script src="{{ [
+        'assets/js/vendor/jquery-1.11.0.min.js',
+        'assets/js/bootstrap.js',
+        'assets/js/plugins.js',
+        'assets/js/main.js',
+        '@framework',
+        '@framework.extras']|theme }}"></script>
+</body>
+</html>

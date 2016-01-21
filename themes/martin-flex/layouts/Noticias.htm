@@ -1,0 +1,51 @@
+[internos]
+pageNumber = "{{ :page }}"
+categoryFilter = "no"
+postsPerPage = 6
+noPostsMessage = "No posts found"
+sortOrder = "published_at desc"
+categoryPage = "Bienestar-Social"
+postPage = "noticias_detalle"
+
+[carousel]
+pageNumber = "{{ :page }}"
+categoryFilter = "no"
+postsPerPage = 3
+noPostsMessage = "No posts found"
+sortOrder = "published_at desc"
+categoryPage = "Bienestar-Social"
+postPage = "noticias_detalle"
+==
+<!DOCTYPE html>
+<head>
+    <meta charset="utf-8">
+    <title>{{ this.page.title }}</title>
+    <meta name="description" content="">
+    <meta name="viewport" content="width=device-width">
+    {% partial 'header-interno' %}
+</head>
+<body>
+    <div class="contenido">    
+        <div class="menu-interno"> 
+            {% partial 'menu' %}
+        </div>
+        <div class="sin_banner"> 
+            <div class="noticias_carousel hidden-xs">
+                {% component 'carousel' %}
+            </div>
+            {% component 'internos' %}
+        </div>
+    </div>
+    {% partial 'footer'   %}
+    <!--FIN CONTENIDO-->
+</div>
+</div>
+<script src="{{ [
+    'assets/js/vendor/jquery-1.11.0.min.js',
+    'assets/js/bootstrap.js',
+    'assets/js/plugins.js',
+    'assets/js/main.js',
+    '@framework',
+    '@framework.extras']|theme }}"></script>
+</body>
+</html>

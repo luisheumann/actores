@@ -1,0 +1,585 @@
+<!DOCTYPE html>
+<head>
+    <meta charset="utf-8">
+    <title>{{ this.page.title }}</title>
+    <meta name="description" content="">
+    <meta name="viewport" content="width=device-width">
+
+
+    {% partial 'header-interno'   %}
+
+
+    <script type="text/javascript">
+
+        function toggleChevron(e) {
+            $(e.target)
+            .prev('.panel-heading')
+            .find("i.indicator")
+            .toggleClass('glyphicon-chevron-down glyphicon-chevron-up');
+        }
+        $('#accordion').on('hidden.bs.collapse', toggleChevron);
+        $('#accordion').on('shown.bs.collapse', toggleChevron);
+    </script>
+
+    <style type="text/css">
+
+        .panel-default>.panel-heading {
+            color: #333;
+            background-color: #fff !important;
+            border-color: #FFF!important;
+        }
+
+        i.indicator.glyphicon {
+            display: none;
+        }
+
+
+        div#accordion {
+            text-align: center;
+            border-color: #FFF;
+        }
+
+        .panel-default {
+            border-color: #FFF !important;
+        }
+
+        .contenedor-sub{
+          /*  padding:30px;*/
+
+      }
+
+      .title-sub-subrayado {
+        font-size: 40px;
+        text-align: center;
+        border-style: dashed;
+        border-bottom: #000;
+        border-bottom-color: #000;
+        border-bottom-width: medium;
+        border-bottom-style: solid;
+        /* width: 250px; */
+        margin-bottom: 25px;
+    }
+
+    .subtitle-naranja {
+        font-size: 18px;
+        color: #E33126;
+        font-weight: bold;
+    }
+
+    .descargar-documento {
+        background-color: #E33126;
+        color: #FFF;
+        text-align: center;
+        height: 30px;
+        padding: 5px;
+        margin-top: 10px;
+        margin-bottom: 10px;
+    }
+
+    .panel-group .panel-heading+.panel-collapse .panel-body {
+     border-top: 1px solid #FFF !important;
+ }
+
+ .nav-tabs>li {
+    float: left;
+    margin-bottom: -1px;
+    background-color: #21A098;
+    color: #FFF;
+    width: 424px;
+    position: relative;
+    z-index: -1;
+}
+
+.nav-tabs>li a{
+    float: left;
+    margin-bottom: -1px;
+    background-color: #21A098;
+    color: #FFF;
+    width: 433px;
+    border-left-style: solid;
+    border-left-color: #fff;
+}
+.nav-tabs>li.active>a, .nav-tabs>li.active>a:hover, .nav-tabs>li.active>a:focus {
+    color: #FFF;
+    background-color: #18756F;
+    border: 1px solid #ddd;
+    border-bottom-color: transparent;
+    cursor: default;
+}
+
+div#myCarousel, #carousel_relaciones, #carousel_formacion {
+    height: 100% !important;
+    
+}
+
+.contenedor-slider{
+    width: 300px;
+    height: 300px;
+    background-color: #000;
+}
+
+span.glyphicon.glyphicon-chevron-right{
+    display: none;
+}
+span.glyphicon.glyphicon-chevron-left{
+   display: none; 
+}
+
+.otro {
+    position: relative;
+    z-index: -2;
+}
+
+ul.nav.nav-tabs {
+    position: relative;
+    z-index: 0;
+}
+.title-slider {
+    font-size: 20px;
+    color: #21A098;
+    font-weight: bold;
+    text-align: justify;
+}
+
+
+div#myCarousel, #carousel_relaciones, #carousel_formacion {
+    padding: 30px;
+}
+
+.carousel-indicators li {
+
+    border: 1px solid #21A098;
+
+}
+
+ol.carousel-indicators {
+    position: relative;
+}
+
+
+@media (max-width: 768px) { 
+    .contenedor-sub {
+        padding: 0px;
+
+        padding-right: 0px !important;
+        padding-left: 0px !important;
+    }
+
+    .nav-tabs>li a {
+        float: left;
+        margin-bottom: -1px;
+        background-color: #21A098;
+        color: #FFF;
+        width: 100%;
+        border-left-style: solid;
+        border-left-color: #fff;
+    }
+    .nav-tabs>li  {
+        float: left;
+        margin-bottom: -1px;
+        background-color: #21A098;
+        color: #FFF;
+        width: 100%;
+        border-left-style: solid;
+        border-left-color: #fff;
+    }
+
+
+
+}
+
+.contenedor-sub {
+    padding: 0px !important;
+    padding-right: 0px !important;
+    padding-left: 0px !important; 
+}
+
+
+.carousel-indicators li {
+    border: 3px solid #18756F;
+    width: 20px;
+    height: 20px;
+}
+
+.carousel-indicators .active {
+    margin: 0;
+    width: 20px;
+    height: 20px;
+    background-color: #18756F;
+}
+
+.circle-submenu1-sub {
+    width: 100px;
+    float: left;
+    height: 100px;
+}
+</style>
+</head>
+<body>
+  <div class="contenido">  
+  <div class="menu-interno"> 
+     {% partial 'menu' %}
+ </div>   
+
+ <div class="bannertop">  <img class="top-fixed-lider" src="{{ ('assets/images/banners/bienestar_social.png')|theme }}" style="display: block; margin: auto; width: 100%; max-width: 1280px; height=100%; " alt="bannertop"></div>
+ <div class="blanco"> 
+
+    <!--CONTENIDO--> 
+
+    <div class="contenedor-sub">
+
+
+
+      <ul class="nav nav-tabs">
+        <li class="active"><a href="#home">BENEFICIOS ASISTENCIALES</a></li>
+        <li><a href="#menu1">RELACIONES ASISTENCIALES</a></li>
+        <li><a href="#menu2">FORMACION Y/O ACTUALIZACION</a></li>
+
+    </ul>
+
+    <div class="tab-content">
+        <div id="home" class="tab-pane fade in active">
+
+            <div id="myCarousel" class="carousel slide" data-ride="carousel">
+              <!-- Indicators -->
+              <ol class="carousel-indicators">
+                <li data-target="#myCarousel" data-slide-to="0" class="active"></li>
+                <li data-target="#myCarousel" data-slide-to="1"></li>
+                <li data-target="#myCarousel" data-slide-to="2"></li>
+                <li data-target="#myCarousel" data-slide-to="3"></li>
+                <li data-target="#myCarousel" data-slide-to="4"></li>
+            </ol>
+
+
+
+            <!-- Wrapper for slides -->
+            <div class="carousel-inner" role="listbox">
+                <div class="item active">
+                   <div class="title-slider"> 
+                    Beneficios asistenciales ordinarios generales
+                </div><div class="contenido_beneficios">
+                Aquellos que forman parte de uno de los programas anuales del Comité Asistencial predefinidos a comienzo del ejercicio.
+
+                “La concesión o denegación de las prestaciones o ayudas tendrá, asimismo, carácter anual y, en ningún caso podrá constituir un derecho adquirido a favor del beneficiario, más allá del límite temporal por el que se concedan por el Comité Asistencial, o en su caso, por el Consejo Directivo, debiendo solicitarse la ayuda cada año o cuando se produzcan las circunstancias que den derecho a una prestación o ayuda del servicio de previsión social de Actores S.C.G.”. Reglamento de previsión social artículo 9 numeral 1 párrafo tercero.
+                </div><div class="title-slider"> 
+                    Orientación individual y/o familiar
+                </div> <div class="contenido_beneficios">
+                A través de este proyecto se pretende brindar a los socios y sus familias orientación en problemáticas sociales, personales, familiares, entre otras; generando un espacio de atención que aporte al mejoramiento de su situación.
+
+                Para acceder al proceso de orientación, se deben cumplir los siguientes requisitos:
+
+                1. Ser socio de pleno derecho.
+                2. Tener interés y/o motivación para establecer la relación de ayuda.
+
+                3.Solicitar una cita con la trabajadora social de Actores SCG. El socio puede comunicarse al número telefónico 5205194/93/92  ext. 107 o al correo electrónico lrodriguez@actores.org.co</div>
+
+            </div>
+
+            <div class="item">
+                <div class="title-slider">
+                    Seguridad social integral (SSI)
+                </div><div class="contenido_beneficios">
+                Este proyecto consiste en realizar los aportes a la Entidad Promotora de Salud EPS, Administradora de Fondo de Pensión AFP y Administradora de Riesgos Laborales, ARL.
+
+                Para ser beneficiario de este proyecto se requiere:
+
+                1. Contar con una vinculación mínima de 6 meses como socio de pleno derecho (si es complementario de otros, este tiempo se ajustará a los requisitos del proyecto que complementa).
+
+                2. Estar al día en los aportes a la seguridad social (EPS y AFP).
+                3. Formato de solicitud debidamente diligenciado y firmado.
+                4. Fotocopia del último recibo de pago de la seguridad social.
+                5. Certificado de afiliación de la EPS y AFP expedida en el último mes.
+
+                6. Declaración juramentada que contenga la siguiente información:
+
+                Ingresos netos de lúltimo año como artista intérprete audiovisual.
+                Fecha exacta de su última participación como artista intérprete audiovisual.
+                Especificar si cuenta con algún tipo de subsidio o prestación de algunaentidad pública o privada (seguros, pensión de vejez, por invalidez, por sustitución o pensión sanción).
+                Si declara renta o no.
+                Patrimonio.
+                Personas a cargo.
+                Fuentes de ingreso para sus gastos personales y familiares.
+                7. Cualquier otro documento que el Comité Asistencial o la Dirección de Bienestar Social considere necesario para soportar la solicitud.
+
+                Condiciones generales para acceder a la seguridad social integral:
+                1. Todos los aportes serán realizados, directamente a las entidades prestadoras
+
+                del servicio, hasta por tres meses consecutivos.
+
+                2. Los aportes se realizarán tomando como ingreso base de cotización (IBC) un (1) S.M.L.M.V
+
+                3. Este proyecto podrá ser complementario del subsidio de desempleo, subsidio para no pensionado, maternidad, paternidad.
+
+                3.1 En caso de que éste sea complemento del subsidio de maternidad se otorgará desde el momento en que se solicite, hasta el tercer mes posterior al parto.
+
+                3.2 Cuando éste es complemento del subsidio de maternidad o subsidio para no pensionado el período puede ser superior a tres meses.
+
+                3.3 En caso de que éste sea complemento del subsidio de paternidad se otorgará hasta por tres meses a partir de la solicitud, siempre y cuando el socio certifique que el bebé o su madre son sus beneficiarios en la entidad promotora de salud. Esta solicitud se podrá realizar desde el momento del nacimiento hasta máximo el sexto mes de edad del bebé.
+
+                3.4 Los socios adultos mayores que no cumplan con los requisitos para acceder al subsidio para no pensionado podrán ser beneficiarios de la seguridad social integral por un período de 12 meses.</div>
+
+            </div>
+
+            <div class="item">
+                <div class="title-slider">
+                    Subsidio de desempleo
+                </div><div class="contenido_beneficios">
+                Para aquellos socios que se encuentran temporalmente fuera de la actividad laboral como actor/actriz audiovisual (cine, televisión, doblaje). Para ser beneficiario de este proyecto se requiere:
+
+                Ser socio de pleno derecho.
+                Formato de solicitud debidamente diligenciado y firmado.
+                Antigüedad de un año como socio de Actores Sociedad Colombiana de Gestión.
+                Declaración juramentada en notaría que contenga la siguiente información:
+                a. Ingresos del último año.
+
+                b. Período de inactividad laboral mayor o igual a cuatro meses consecutivos, al momento de realizar la solicitud.
+
+                c. Especificar si se cuenta o no con algún tipo de subsidio o prestación de alguna entidad pública o privada (seguros, pensiones de viudez, por invalidez, por sustitución o pensión sanción).
+
+                d. Si se declara o no renta.
+
+                e. Patrimonio.
+
+                f. Personas a cargo.
+
+                g. Fuentes de ingreso para sus gastos personales y familiares.
+
+                5. Cualquier otro documento que el Comité considere necesario para el estudio de caso.
+
+                6. Visita domiciliaria a discreción de la trabajadora social.
+
+                Este subsidio se asignará en dinero, por un período de tres meses consecutivos.
+
+                Sólo podrá solicitarse nuevamente el subsidio, una vez transcurra un año  contado, a partir de la fecha de la última mensualidad recibida por este concepto.
+
+                En caso que el socio consiga trabajo durante el período que se encuentre recibiendo el subsidio de desempleo, deberá avisar a la sociedad la fecha en que recibirá su primer pago de honorarios como actor/actriz audiovisual con la finalidad de que el Comité Asistencial tome una decisión.</div>
+            </div>
+
+            <div class="item">
+                <div class="title-slider">
+                    Atención médica domiciliaria
+                </div><div class="contenido_beneficios">
+                Servicio de atención médica domiciliaria para aquellos socios con condiciones de salud o que por su edad así lo requieran.
+
+                Para ser beneficiario de este proyecto se requiere:
+
+                Ser socio de pleno derecho.
+                Formato de solicitud de asistencia diligenciado y firmado.
+                Certificación médica que especifique el diagnóstico.
+                Estar vinculado a una EPS.
+                Cualquier otro documento que el Comité Asistencial o la Dirección de Bienestar Social considere necesario para soportar la solicitud.
+                6. Visita domiciliaria.</div>
+                <div class="title-slider">
+                    Subsidio funerario
+                </div><div class="contenido_beneficios">
+                Beneficio económico dirigido a atender los gastos funerarios de los socios de pleno derecho que fallezcan.
+
+                Para ser beneficiario de dicho auxilio es necesario:
+
+                Para su desembolso es necesario presentar la cuenta de cobro o factura de la entidad prestadora del servicio a nombre de Actores S.C.G.</div>
+            </div>
+            <div class="item">
+                <div class="title-slider">
+                    Subsidio de maternidad
+                </div><div class="contenido_beneficios">
+                Beneficio económico para todas las socias de pleno derecho que se encuentren en estado de embarazo.
+
+                Para ser beneficiaria de este proyecto se requiere:
+
+                1. Formato de solicitud debidamente diligenciado y firmado.
+
+                2. Tener la calidad de socio de pleno derecho con una antigüedad mínima de 6 meses.
+
+                3. Realizar la solicitud a partir del quinto mes de gestación.
+
+                4. Certificado médico que acredite el mes de gestación en el que se encuentra o registro civil de nacimiento.
+
+                5. Certificado de cuenta bancaria o extracto bancario.
+
+                6. Cualquier otro documento que el Comité Asistencial o la Dirección de Bienestar Social considere necesario para el estudio de caso.
+
+                7. Visita domiciliaria a discreción de la trabajadora social.
+
+                Este subsidio será entregado por un período de cinco meses consecutivos a partir de los dos últimos meses de gestación hasta el tercer mes posterior al parto.
+
+                En aquellos casos de partos prematuros el subsidio se entregará a partir de la fecha de nacimiento y durante cinco meses consecutivos.
+
+                Se realizará un seguimiento mensual del desarrollo del embarazo.
+
+                El monto asignado a cada beneficiaria, se definirá de acuerdo con su repertorio.</div>
+                <div class="title-slider">
+                    Subsidio de paternidad
+                </div><div class="contenido_beneficios">
+                Beneficio económico para todos los socios de pleno derecho reconozcan la paternidad del recién nacido.
+
+                1. Formato de solicitud debidamente diligenciado y firmado.
+                2. El recién nacido debe tener menos de seis meses de edad.
+                3. Ser socio de pleno derecho con una antigüedad mínima de 12 meses. 4. Registro civil del recién nacido.
+
+                5. Certificado de cuenta bancaria o extracto bancario.
+
+                6. Cualquier otro documento que el Comité Asistencial o la Dirección de Bienestar Social considere necesario para el estudio de caso.
+
+                7. Visita domiciliaria a discreción de la trabajadora social.
+
+                Este subsidio será entregado por un período de tres meses consecutivos.
+
+                El monto asignado a cada beneficiario, se definirá de acuerdo con su repertorio.</div>
+            </div>
+        </div>
+
+        <!-- Left and right controls -->
+        <a class="left carousel-control" href="#myCarousel" role="button" data-slide="prev">
+            <span class="glyphicon glyphicon-chevron-left" aria-hidden="true"></span>
+            <span class="sr-only">Previous</span>
+        </a>
+        <a class="right carousel-control" href="#myCarousel" role="button" data-slide="next">
+            <span class="glyphicon glyphicon-chevron-right" aria-hidden="true"></span>
+            <span class="sr-only">Next</span>
+        </a>
+    </div>
+</div>
+<div id="menu1" class="tab-pane fade">
+    <div id="carousel_relaciones" class="carousel slide" data-ride="carousel">
+        <ol class="carousel-indicators">
+            <li data-target="#carousel_relaciones" data-slide-to="0" class="active"></li>
+            <li data-target="#carousel_relaciones" data-slide-to="1"></li>
+        </ol>
+        <!-- Wrapper for slides -->
+        <div class="carousel-inner" role="listbox">
+            <div class="item active">
+                <div class="title-slider"> 
+                    Actores en Red
+                </div><div class="contenido_beneficios">
+                El objetivo fundamental es realizar alianzas con instituciones del ámbito estatal, privado, local y comunitario, entre otras, para mejorar la calidad de vida de los socios y sus familias.
+
+Vincular a los socios de ACTORES, y su grupo familiar en las condiciones de ley, a los servicios de turismo, recreación, capacitación que ofrece Compensar con tarifa categoría C.
+
+Condiciones generales del convenio
+
+a. El socio podrá vincular como beneficiario a su grupo familiar (padres, hijos menores de 18 años y compañero (a) permanente).
+
+b. Los socios podrán acceder a todos los servicios de la caja de compensación excepto a créditos, subsidio monetario, subsidio familiar.
+
+c. Quienes quieran acceder a los servicios que ofrece Compensar como caja de compensación podrán afiliarse de manera independiente.
+
+d. Los socios podrán acceder a los servicios fuera de Bogotá a través del convenio cajas sin fronteras.
+
+e. Actores S.C.G asumirá el costo mensual para que los socios y sus beneficiarios se encuentren activos en el convenio y los socios asumirán los costos de los servicios que utilicen teniendo en cuenta las tarifas y requisitos establecidos por Compensar.
+
+Requisitos para ser beneficiario del convenio
+
+a. Ser socio de pleno derecho y manifestar su interés por escrito para continuar o vincularse al convenio entre el 1 y el 30 de noviembre de cada año.</div>
+            </div>
+            <div class="item">
+                <div class="title-slider"> 
+                    Servicios prestados por los socios o por terceros
+                </div><div class="contenido_beneficios">
+                Pensando en el mejoramiento de la calidad de vida de nuestros socios y en la búsqueda de espacios de recreación, cultura, deporte, entre otros, se establecerán convenios o se promocionarán servicios prestados por los socios o por terceros, con la posibilidad de acceder a una atención preferencial o beneficio económico para el socio y/o su grupo familiar. Estos serán publicados en la página web.
+
+Las ofertas para el establecimiento de convenios o promoción de servicios prestados por socios o terceros, deberán ser presentadas para ser estudiadas y aprobadas por el Comité Asistencial, cumpliendo los siguientes requisitos:
+
+Documento con portafolio de servicios.
+Datos de contacto.
+Tarifas al público y tarifas para la sociedad.
+Estudio del Comité Asistencial.
+Ratificación del Consejo Directivo.
+Es importante mencionar que servicios relacionados con los siguientes temas no podrán hacer parte de nuestro portafolio:
+
+a. Finanzas personales e inversiones.
+b. Actividadesrelacionadasconjuegosdeazar.
+c. Cualquier otro que a consideración del Comité Asistencial llegase a afectar la salud y la integridad del socio.</div>
+            </div>
+        </div>
+        <!-- Left and right controls -->
+        <a class="left carousel-control" href="#carousel_relaciones" role="button" data-slide="prev">
+            <span class="glyphicon glyphicon-chevron-left" aria-hidden="true"></span>
+            <span class="sr-only">Previous</span>
+        </a>
+        <a class="right carousel-control" href="#carousel_relaciones" role="button" data-slide="next">
+            <span class="glyphicon glyphicon-chevron-right" aria-hidden="true"></span>
+            <span class="sr-only">Next</span>
+        </a>
+    </div>
+</div>
+
+<div id="menu2" class="tab-pane fade">
+    <div id="carousel_formacion" class="carousel slide" data-ride="carousel">
+        <ol class="carousel-indicators">
+            <li data-target="#carousel_formacion" data-slide-to="0" class="active"></li>
+        </ol>
+        <!-- Wrapper for slides -->
+        <div class="carousel-inner" role="listbox">
+            <div class="item active"><div class="contenido_beneficios">
+            Este programa reconoce la importancia de la constante preparación que deben tener los socios como artistas intérpretes audiovisuales.
+
+Por ello ofrecerá dos modalidades de formación:
+
+a. Cursos
+
+Actores S.C.G ofrecerá cursos de formación en diversas áreas de interés para el artista intérprete audiovisual con tarifas preferenciales.
+
+b. Subsidio educativo
+
+Beneficio económico para los socios de pleno derecho interesados en participar en procesos de formación complementarios como artista intérprete audiovisual.
+
+Se otorgará por una única vez al año hasta por el 70% del valor de curso sin que exceda un S.M.L.M.V. que serán pagados directamente a la persona jurídica prestadora del servicio.
+
+Este proyecto estará sujeto a la disponibilidad presupuestal anual.
+
+Se desembolsará una vez el socio haya pagado el valor que le corresponde.
+
+Para ser beneficiario del subsidio educativo se requiere:
+
+1. Ser socio de pleno derecho con una antigüedad mínima de 12 meses.
+
+2. Formato de solicitud de asistencia debidamente diligenciado y firmado.
+
+3. Factura o documento equivalente a nombre de Actores S.C.G. que incluya nombre del socio y valor a pagar.
+
+4. RUT de la persona jurídica.
+5. Certificado de cuenta bancaria de la persona jurídica.
+
+6. Cualquier otro documento que el Comité Asistencial o la Dirección de Bienestar Social considere necesario para soportar la solicitud.</div>
+            </div>
+        </div>
+        <!-- Left and right controls -->
+        <a class="left carousel-control" href="#carousel_formacion" role="button" data-slide="prev">
+            <span class="glyphicon glyphicon-chevron-left" aria-hidden="true"></span>
+            <span class="sr-only">Previous</span>
+        </a>
+        <a class="right carousel-control" href="#carousel_formacion" role="button" data-slide="next">
+            <span class="glyphicon glyphicon-chevron-right" aria-hidden="true"></span>
+            <span class="sr-only">Next</span>
+        </a>
+    </div>
+</div>
+
+<script>
+    $(document).ready(function(){
+        $(".nav-tabs a").click(function(){
+            $(this).tab('show');
+        });
+    });
+</script>
+
+
+</div>
+
+</div>
+{% partial 'footer'   %}
+<!--FIN CONTENIDO-->
+</div>
+</div>
+
+
+<script src="{{ [
+    'assets/js/vendor/jquery-1.11.0.min.js',
+    'assets/js/bootstrap.js',
+    'assets/js/plugins.js',
+    'assets/js/main.js',
+    '@framework',
+    '@framework.extras']|theme }}"></script>
+
+</body>
+</html>
