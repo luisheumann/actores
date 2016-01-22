@@ -10,13 +10,30 @@ pagination = 1
 style = "smallcal"
 calendar = 1
 ==
+
+<style type="text/css">
+@media (max-width: 768px) { 	
+	.eventos_home {
+    background-color: #ccc;
+
+
+}
+    .lista_eventos {
+    padding: 0px;
+    border-right: 0px !important;
+
+
+}
+
+  }
+</style>
 <div class="eventos_home">
 
-		<div class="col-md-6 lista_eventos">
+		<div class="col-sm-6 lista_eventos">
 			<p class="proximos_eventos">próximos eventos camaleón</p>
 			{% component 'proEventList' %}
 		</div>
-		<div class="col-md-6 calendario">
+		<div class="col-sm-6 calendario">
 			{% component 'proEventCalendar' %}
 		</div>
 

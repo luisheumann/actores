@@ -34,31 +34,37 @@ http://www.templatemo.com/free-website-templates/406-flex
 <!--[if lt IE 7]>
     <p class="chromeframe">You are using an outdated browser. <a href="http://browsehappy.com/">Upgrade your browser today</a> or <a href="http://www.google.com/chromeframe/?redirect=true">install Google Chrome Frame</a> to better experience this site.</p>
     <![endif]-->
-    <div class="menu-interno"> 
+    <div class="menu-interno col-xs-12 nopadding"> 
       {% partial 'menu'   %}
   </div>   
 
-
+ <div class="col-xs-12 nopadding">
   {% partial 'site-main' %}
-
+  </div>
+ <div class="col-xs-12 nopadding">
   {% partial 'hazte_socio_movil' %}
-
+  </div>
+ <div class="col-xs-12 nopadding">
   {% partial 'services'  %}
-  <div class="row">
+  </div>
+  <div class="col-xs-12 nopadding">
 {% partial 'eventos-home' %} 
 </div>
-<div class="row">
+<div class="col-xs-12 nopadding">
   {% partial 'noticias_home' %}
 </div>
-
+<div class="col-xs-12 nopadding">
   {% partial 'testimonios' %}    
-
+</div>
+<div class="col-xs-12 nopadding">
   {% partial 'slide' %}
+  </div>
 
   {% partial 'contact' %}
 
+<div class="col-xs-12 nopadding">
   {% partial 'hazte_socio_web' %}
-
+</div>
   <script src="{{ [
     'assets/js/vendor/jquery-1.11.0.min.js',
     'assets/js/bootstrap.js',
