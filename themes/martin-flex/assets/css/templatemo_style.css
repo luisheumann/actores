@@ -883,9 +883,11 @@ padding: 0px !important;
 }
 
 .calendario {
-padding: 0px !important;
-    width: 90% !important;
+padding: 10px !important;
+    width: 100% !important;
     margin: auto;
+
+
   
   
    
@@ -957,4 +959,42 @@ li.elt_1{
 span.ps-caption {
     height: 100% !important;
 }
+}
+
+
+
+@media (max-width: 2000px) and (min-width: 768px) {
+.menu-app > nav > ul > li > a {
+       align-items: flex-start;
+    color: #fff;
+    display: flex;
+    font-size: 23px !important;
+    font-weight: bold !important;
+    letter-spacing: 0px !important;
+    max-width: 130px;
+    padding: 13px 31px !important;
+    text-decoration: none;
+    text-shadow: 0 1px 1px rgba(0,0,0,.1);
+    transition: all linear 0.1s;
+    /* width: 1280px; */
+}
+nav{
+  background-color: #652981 !important;
+}
+.menu-interno {
+    margin-left: auto;
+    margin-right: auto;
+    width: 1280px !important;
+    }
+
+    .menu-app > nav > ul > li a + div {
+    border-radius: 0 0 2px 2px;
+    box-shadow: 0 3px 1px rgba(0,0,0,.05);
+    display: none;
+    font-size: 12px !important;
+    position: absolute;
+    width: 195px;
+    font-weight: bold !important;
+  }
+
 }
