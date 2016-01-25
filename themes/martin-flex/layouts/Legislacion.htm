@@ -44,12 +44,13 @@ $('#accordion').on('shown.bs.collapse', toggleChevron);
     }
 
     .contenedor-sub{
-        padding:30px;
-        padding-right: 200px;
-        padding-left: 200px;
+      padding: 30px;
+      padding-right: 20% !important;
+      padding-left: 20% !important;
+      text-align: justify;
     }
 
-    .title-sub-subrayado {
+    . {
         font-size: 15px;
         text-align: center;
         border-style: dashed;
@@ -82,7 +83,7 @@ $('#accordion').on('shown.bs.collapse', toggleChevron);
 }
 
 @media (max-width: 768px) { 
-.title-sub-subrayado {
+. {
     font-size: 20px !important;
     text-align: center;
     border-style: dashed;
@@ -103,7 +104,9 @@ $('#accordion').on('shown.bs.collapse', toggleChevron);
       {% partial 'menu' %}
   </div>   
 
-<div class="bannertop">  <img class="top-fixed-lider" src="{{ ('assets/images/banners/legislacion.png')|theme }}" style="display: block; margin: auto; width: 100%; max-width: 1280px; height=100%; " alt="bannertop"></div>
+<div class="banner_corto" style="height:374px !important">
+  <img class="top-fixed-lider" src="{{ ('assets/images/banners/legislacion.png')|theme }}" style="display: block; margin: auto; width: 100%; max-width: 1280px; height=100%; " alt="bannertop">
+</div>
 <div class="blanco"> 
 
 <!--CONTENIDO-->
@@ -117,7 +120,7 @@ $('#accordion').on('shown.bs.collapse', toggleChevron);
     <div class="panel-heading titulos_legislacion">
       <h4 class="panel-title">
         <a class="accordion-toggle" data-toggle="collapse" data-parent="#accordion" href="#collapse_1">
-        <div class="title-sub-subrayado">DECISIÓN ANDINA 351 DE 1993</div>
+        <div class="">DECISIÓN ANDINA 351 DE 1993</div>
         </a><i class="indicator glyphicon glyphicon-chevron-down  pull-right"></i>
       </h4>
     </div>
@@ -136,7 +139,7 @@ $('#accordion').on('shown.bs.collapse', toggleChevron);
     <div class="panel-heading titulos_legislacion">
       <h4 class="panel-title">
         <a class="accordion-toggle" data-toggle="collapse" data-parent="#accordion" href="#collapse_2">
-            <div class="title-sub-subrayado">LEY NÚMERO 23 DE 1982</div>
+            <div class="">LEY NÚMERO 23 DE 1982</div>
         </a><i class="indicator glyphicon glyphicon-chevron-up  pull-right"></i>
       </h4>
     </div>
@@ -155,7 +158,7 @@ $('#accordion').on('shown.bs.collapse', toggleChevron);
     <div class="panel-heading titulos_legislacion">
       <h4 class="panel-title">
         <a class="accordion-toggle" data-toggle="collapse" data-parent="#accordion" href="#collapse_3">
-          <div class="title-sub-subrayado">LEY 44 DE 1993</div>
+          <div class="">LEY 44 DE 1993</div>
         </a><i class="indicator glyphicon glyphicon-chevron-up pull-right"></i>
       </h4>
     </div>
@@ -174,7 +177,7 @@ $('#accordion').on('shown.bs.collapse', toggleChevron);
     <div class="panel-heading titulos_legislacion">
       <h4 class="panel-title">
         <a class="accordion-toggle" data-toggle="collapse" data-parent="#accordion" href="#collapse_4">
-          <div class="title-sub-subrayado">LEY 1403 DE 2010</div>
+          <div class="">LEY 1403 DE 2010</div>
         </a><i class="indicator glyphicon glyphicon-chevron-up pull-right"></i>
       </h4>
     </div>
@@ -193,7 +196,7 @@ $('#accordion').on('shown.bs.collapse', toggleChevron);
     <div class="panel-heading titulos_legislacion">
       <h4 class="panel-title">
         <a class="accordion-toggle" data-toggle="collapse" data-parent="#accordion" href="#collapse_5">
-          <div class="title-sub-subrayado">DECRETO 3942 DE 2010</div>
+          <div class="">DECRETO 3942 DE 2010</div>
         </a><i class="indicator glyphicon glyphicon-chevron-up pull-right"></i>
       </h4>
     </div>
@@ -212,7 +215,7 @@ $('#accordion').on('shown.bs.collapse', toggleChevron);
     <div class="panel-heading titulos_legislacion">
       <h4 class="panel-title">
         <a class="accordion-toggle" data-toggle="collapse" data-parent="#accordion" href="#collapse_6">
-          <div class="title-sub-subrayado">Decreto 19 de 2012</div>
+          <div class="">Decreto 19 de 2012</div>
         </a><i class="indicator glyphicon glyphicon-chevron-up pull-right"></i>
       </h4>
     </div>
@@ -231,7 +234,7 @@ $('#accordion').on('shown.bs.collapse', toggleChevron);
     <div class="panel-heading titulos_legislacion">
       <h4 class="panel-title">
         <a class="accordion-toggle" data-toggle="collapse" data-parent="#accordion" href="#collapse_7">
-          <div class="title-sub-subrayado">CONVENCIÓN DE ROMA, 1961</div>
+          <div class="">CONVENCIÓN DE ROMA, 1961</div>
         </a><i class="indicator glyphicon glyphicon-chevron-up pull-right"></i>
       </h4>
     </div>
@@ -250,7 +253,7 @@ $('#accordion').on('shown.bs.collapse', toggleChevron);
     <div class="panel-heading titulos_legislacion">
       <h4 class="panel-title">
         <a class="accordion-toggle" data-toggle="collapse" data-parent="#accordion" href="#collapse_8">
-          <div class="title-sub-subrayado">TRATADO DE LA OMPI SOBRE INTERPRETACIÓN O EJECUCIÓN Y FONOGRAMAS  -TOIEF-</div>
+          <div class="">TRATADO DE LA OMPI SOBRE INTERPRETACIÓN O EJECUCIÓN Y FONOGRAMAS  -TOIEF-</div>
         </a><i class="indicator glyphicon glyphicon-chevron-up pull-right"></i>
       </h4>
     </div>
@@ -269,7 +272,7 @@ $('#accordion').on('shown.bs.collapse', toggleChevron);
     <div class="panel-heading titulos_legislacion">
       <h4 class="panel-title">
         <a class="accordion-toggle" data-toggle="collapse" data-parent="#accordion" href="#collapse_9">
-          <div class="title-sub-subrayado">LEY 1493 DEL 2011 (26 de diciembre del 2011)</div>
+          <div class="">LEY 1493 DEL 2011 (26 de diciembre del 2011)</div>
         </a><i class="indicator glyphicon glyphicon-chevron-up pull-right"></i>
       </h4>
     </div>
@@ -288,7 +291,7 @@ $('#accordion').on('shown.bs.collapse', toggleChevron);
     <div class="panel-heading titulos_legislacion">
       <h4 class="panel-title">
         <a class="accordion-toggle" data-toggle="collapse" data-parent="#accordion" href="#collapse_10">
-          <div class="title-sub-subrayado">TRATADO DE BEIJING</div>
+          <div class="">TRATADO DE BEIJING</div>
         </a><i class="indicator glyphicon glyphicon-chevron-up pull-right"></i>
       </h4>
     </div>

@@ -6,10 +6,10 @@ description = "Default layout"
 <!--[if IE 8]>         <html class="no-js lt-ie9">               <![endif]-->
 <!--[if gt IE 8]> <!--> <html class="no-js">                 <!--<![endif]-->
 <head>
-    <meta charset="utf-8">
-    <title>{{ this.page.title }}</title>
-    <meta name="description" content="">
-    <meta name="viewport" content="width=device-width">
+  <meta charset="utf-8">
+  <title>{{ this.page.title }}</title>
+  <meta name="description" content="">
+  <meta name="viewport" content="width=device-width">
 
 <!--
 Flex Template
@@ -36,83 +36,83 @@ http://www.templatemo.com/free-website-templates/406-flex
     <![endif]-->
     <div class="menu-interno col-xs-12 nopadding"> 
       {% partial 'menu'   %}
-  </div>   
+    </div>   
 
- <div class="col-xs-12 nopadding">
-  {% partial 'site-main' %}
-  </div>
- <div class="col-xs-12 nopadding">
-  {% partial 'hazte_socio_movil' %}
-  </div>
- <div class="col-xs-12 nopadding">
-  {% partial 'services'  %}
-  </div>
-  <div class="col-xs-12 nopadding">
-{% partial 'eventos-home' %} 
-</div>
-<div class="col-xs-12 nopadding">
-  {% partial 'noticias_home' %}
-</div>
-<div class="col-xs-12 nopadding">
-  {% partial 'testimonios' %}    
-</div>
-<div class="col-xs-12 nopadding">
-  {% partial 'slide' %}
-  </div>
+    <div class="col-xs-12 nopadding">
+      {% partial 'site-main' %}
+    </div>
+    <div class="col-xs-12 nopadding">
+      {% partial 'hazte_socio_movil' %}
+    </div>
+    <div class="col-xs-12 nopadding">
+      {% partial 'services'  %}
+    </div>
+    <div class="col-xs-12 nopadding">
+      {% partial 'noticias_home' %}
+    </div>
+    <div class="col-xs-12 nopadding">
+      {% partial 'eventos-home' %} 
+    </div>
+    <div class="col-xs-12 nopadding">
+      {% partial 'testimonios' %}    
+    </div>
+    <div class="col-xs-12 nopadding">
+      {% partial 'slide' %}
+    </div>
 
-  {% partial 'contact' %}
+    {% partial 'contact' %}
 
-<div class="col-xs-12 nopadding">
-  {% partial 'hazte_socio_web' %}
-</div>
-  <script src="{{ [
-    'assets/js/vendor/jquery-1.11.0.min.js',
-    'assets/js/bootstrap.js',
-    'assets/js/plugins.js',
-    'assets/js/pgwslider.js',
-    'assets/js/main.js',
-    '@framework',
-    '@framework.extras']|theme }}"></script>
+    <div class="col-xs-12 nopadding">
+      {% partial 'hazte_socio_web' %}
+    </div>
+    <script src="{{ [
+      'assets/js/vendor/jquery-1.11.0.min.js',
+      'assets/js/bootstrap.js',
+      'assets/js/plugins.js',
+      'assets/js/pgwslider.js',
+      'assets/js/main.js',
+      '@framework',
+      '@framework.extras']|theme }}"></script>
 
-    <!-- Google Map -->
-    <script src="http://maps.google.com/maps/api/js?sensor=true"></script>
-    <script src="{{ ['assets/js/vendor/jquery.gmap3.min.js']|theme }}"></script>
-    <!-- Google Map Init-->
-    <script type="text/javascript">
+      <!-- Google Map -->
+      <script src="http://maps.google.com/maps/api/js?sensor=true"></script>
+      <script src="{{ ['assets/js/vendor/jquery.gmap3.min.js']|theme }}"></script>
+      <!-- Google Map Init-->
+      <script type="text/javascript">
         jQuery(function($){
-            $('#map_canvas').gmap3({
-                marker: {
-                    address: '4.6883967,-74.0472464',
-                    options: {
-                      icon: new google.maps.MarkerImage("http://actores.sionica.net/themes/martin-flex/assets/images/pin_map.png")
-                  }
-              },
-              map:{
-                options:{
-                    zoom: 15,
-                    scrollwheel: false,
-                    streetViewControl : true
-                }
+          $('#map_canvas').gmap3({
+            marker: {
+              address: '4.6883967,-74.0472464',
+              options: {
+                icon: new google.maps.MarkerImage("http://actores.sionica.net/themes/martin-flex/assets/images/pin_map.png")
+              }
+            },
+            map:{
+              options:{
+                zoom: 15,
+                scrollwheel: false,
+                streetViewControl : true
+              }
             },
             overlay:{
-                latLng: [4.6883967,-74.0472464],
-                options:{
-                  content: '<div class="texto_mapa hidden-xs"><span>CONTACTO</span><br>BOGOTÁ - COLOMBIA<br>'+
-                            'Cra 15 N° 103 - 37,<br>'+
-                            'Oficina 103<br><br>'+
-                            'PBX: (+571) 5205192<br>'+
-                            '(+571) 5205193<br>'+
-                            '(+571) 5205192<br>'+
-                            'CEL:3138614710</div>',
-                  offset:{
-                    y:-150,
-                    x:100
+              latLng: [4.6883967,-74.0472464],
+              options:{
+                content: '<div class="texto_mapa hidden-xs"><span>CONTACTO</span><br>BOGOTÁ - COLOMBIA<br>'+
+                'Cra 15 N° 103 - 37,<br>'+
+                'Oficina 103<br><br>'+
+                'PBX: (+571) 5205192<br>'+
+                '(+571) 5205193<br>'+
+                '(+571) 5205192<br>'+
+                'CEL:3138614710</div>',
+                offset:{
+                  y:-150,
+                  x:100
                 }
+              }
             }
-        }
-    });
-            $('.pgwSlider').pgwSlider();
-        });
+          });
+$('.pgwSlider').pgwSlider();
+});
 </script>
 {% scripts %}
 
