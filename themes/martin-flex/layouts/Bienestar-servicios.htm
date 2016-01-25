@@ -803,7 +803,12 @@ ol.carousel-indicators {
 .servicio_tercero_13{
   background-image: url('{{ ('assets/images/servicios/terceros/13.png')|theme }}');
 }
+
+
+
 </style>
+
+
 </head>
 <body> 
 
@@ -829,7 +834,7 @@ ol.carousel-indicators {
                         <nav role="navigation">
                             <ul>
                                 <li class="menu-quienes">
-                                    <a href="#salud">
+                                    <a href="#salud" onclick="location.reload(true)">
                                         <div class="service-item fondo_amarillo" id="service-1">
                                             <div class="service-icon fondo_amarillo">
                                                 SALUD
@@ -845,7 +850,7 @@ ol.carousel-indicators {
                                     </a>
                                 </li>
                                 <li class="menu-noticias">
-                                    <a href="#capacitacion">
+                                    <a href="#capacitacion" target="top" onclick="location.reload(true)">
                                         <div class="service-item fondo_turqueza" id="service-1">
                                             <div class="service-icon fondo_turqueza">
                                                 CAPACITACIÓN
@@ -861,7 +866,7 @@ ol.carousel-indicators {
                                     </a>
                                 </li>
                                 <li class="menu-legislacion-1">
-                                    <a href="#hospedaje">
+                                    <a href="#hospedaje" onclick="location.reload(true)">
                                         <div class="service-item fondo_verde" id="service-1">
                                             <div class="service-icon fondo_verde">
                                                 HOSPEDAJE
@@ -877,7 +882,7 @@ ol.carousel-indicators {
                                     </a>
                                 </li>
                                 <li class="menu-noticias">
-                                    <a href="#fotografia">
+                                    <a href="#fotografia" onclick="location.reload(true)">
                                         <div class="service-item fondo_violeta" id="service-1">
                                             <div class="service-icon fondo_violeta">
                                                 FOTOGRAFÍA
@@ -893,7 +898,7 @@ ol.carousel-indicators {
                                     </a>
                                 </li>
                                 <li class="menu-noticias2">
-                                    <a href="#free-press">
+                                    <a href="#free-press" onclick="location.reload(true)">
                                         <div class="service-item fondo_rojo" id="service-1">
                                             <div class="service-icon fondo_rojo">
                                                 FREE-PRESS
@@ -962,8 +967,8 @@ ol.carousel-indicators {
         </div>
     </div>
 </div>
-
-<div id="capacitacion" class="contenedor-sub-socio">
+<div id="capa">
+<div id="capacitacion" class="contenedor-sub-socio" >
     <div class="contenedor-row-1">
         <div class="circle-submenu1" >
             <button type="button" class="btn btn-default btn-circle btn-xl servicio_2">
@@ -985,7 +990,7 @@ ol.carousel-indicators {
         </div>
     </div>
 </div>
-
+</div>
 <!-- Modal -->
 <div id="ver_mas_2" style="padding-top:80px;" class="modal fade" role="dialog">
     <div class="modal-dialog">
@@ -1669,8 +1674,48 @@ Citas: Todos los servicios son con cita previa. Favor llamarnos y solicitar su c
 
 <script>
     $(document).ready(function(){
+         
+var url = window.location.href;
+url = url.split('#').pop().split('?').pop();
+var page = url.substring(url.lastIndexOf('/') + 1)
+
+
+if (page == "capacitacion") {
+$("#capacitacion").css("display", "block");
+}else{
+$("#capacitacion").css("display", "none");
+}
+if (page == "hospedaje") {
+$("#hospedaje").css("display", "block");
+}else{
+$("#hospedaje").css("display", "none");
+}
+
+if (page == "fotografia") {
+$("#fotografia").css("display", "block");
+}else{
+$("#fotografia").css("display", "none");
+}
+if (page == "free-press") {
+$("#free-press").css("display", "block");
+}else{
+$("#free-press").css("display", "none");
+}
+if (page == "salud") {
+$("#salud").css("display", "block");
+}else{
+$("#salud").css("display", "none");
+}
+
+
+
+
+
+
+
         $(".nav-tabs a").click(function(){
             $(this).tab('show');
+
         });
     });
 </script>

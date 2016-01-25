@@ -20,9 +20,9 @@ function onStart() {
         <div class="row">
           {% for row in portfolio %}
             <div class="col-md-4 col-sm-6">
-              <div class="ih-item square colored effect7">
+              <div class="ih-item square colored effect7 btn-home-menu">
                 <a href="{{ row['enlace'] }}">
-                  <div class="img">
+                  <div class="">
                     <img src="{{ ('assets/images/gallery/' ~ row['image']) |theme }}" alt="{{ row['title'] }}">
                   </div>
                   <div class="info">
